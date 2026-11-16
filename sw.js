@@ -1,4 +1,4 @@
-const CACHE_NAME = "gabriel-daily-reminder-v2";
+const CACHE_NAME = "gabriel-daily-reminder-v3";
 const PRECACHE_ASSETS = [
   "./",
   "./index.html",
