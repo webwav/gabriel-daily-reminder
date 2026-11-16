@@ -1,0 +1,326 @@
+/* ==================== TABLET BETA STUDIO & REAL LIVE TABLET FRAME ==================== */
+
+body.tablet-beta-framed {
+  background: radial-gradient(circle at 50% 18%, #1e293b 0%, #0f172a 62%, #020617 100%);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+body.tablet-beta-fullwindow {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Hide internal yellow preview pill when external Beta Studio Bar controls the live virtual clock,
+   so the inside of the tablet screen is 100% identical to Gabriel's real live tablet! */
+body.tablet-beta-active #kiosk-sim-banner {
+  display: none !important;
+}
+
+/* Top Beta Testing Control Bar (sits OUTSIDE the tablet bezel) */
+#beta-studio-bar {
+  flex-shrink: 0;
+  z-index: 90;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+  color: #f8fafc;
+  padding: 8px 14px;
+  box-shadow: 0 8px 28px rgba(2, 6, 23, 0.45);
+  user-select: none;
+}
+
+#beta-studio-bar select {
+  background-color: #1e293b;
+  color: #f8fafc;
+}
+
+/* Minimized Floating Beta Pill (when user collapses top bar or tests edge-to-edge) */
+#beta-floating-pill {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 95;
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(12px);
+  color: #f8fafc;
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  border-radius: 9999px;
+  padding: 6px 10px 6px 14px;
+  box-shadow: 0 12px 32px rgba(2, 6, 23, 0.55);
+  display: none;
+  align-items: center;
+  gap: 8px;
+}
+
+body.beta-bar-minimized #beta-studio-bar {
+  display: none !important;
+}
+
+body.beta-bar-minimized.tablet-beta-active #beta-floating-pill {
+  display: inline-flex !important;
+}
+
+/* Stage Area holding the scaled physical tablet */
+#tablet-stage-area {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+body.tablet-beta-fullwindow #tablet-stage-area {
+  overflow: visible;
+  display: block;
+}
+
+/* Physical Tablet Hardware Bezel */
+body.tablet-beta-framed #tablet-hardware-bezel {
+  position: relative;
+  padding: 20px 24px 22px 24px;
+  border-radius: 38px;
+  background: linear-gradient(145deg, #273244 0%, #151c28 50%, #0b1019 100%);
+  border: 2px solid rgba(255, 255, 255, 0.16);
+  box-shadow:
+    0 30px 70px -12px rgba(0, 0, 0, 0.78),
+    0 0 0 1px rgba(15, 23, 42, 0.95),
+    inset 0 1px 2px rgba(255, 255, 255, 0.22);
+  transform: scale(var(--tablet-scale, 1));
+  transform-origin: center center;
+  transition: width 0.22s ease, height 0.22s ease;
+  flex-shrink: 0;
+}
+
+/* Subtle Hardware Front Camera Dot */
+body.tablet-beta-framed #tablet-hardware-bezel::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 35% 35%, #38bdf8 0%, #0f172a 55%, #020617 100%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 30;
+}
+
+/* Subtle Tablet Home Indicator Pill at Bottom of Screen */
+body.tablet-beta-framed #tablet-screen-viewport::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 124px;
+  height: 4px;
+  border-radius: 9999px;
+  background: rgba(15, 23, 42, 0.24);
+  pointer-events: none;
+  z-index: 40;
+}
+
+body.tablet-beta-framed #tablet-screen-viewport:has(.sky-evening)::after,
+body.tablet-beta-framed #tablet-screen-viewport:has(.sky-sleep)::after {
+  background: rgba(248, 250, 252, 0.32);
+}
+
+/* Exact Pixel Tablet Screen Viewport */
+body.tablet-beta-framed #tablet-screen-viewport {
+  width: var(--sim-w, 1024px);
+  height: var(--sim-h, 768px);
+  border-radius: 22px;
+  overflow: hidden;
+  position: relative;
+  background: #0f172a;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.35);
+}
+
+/* Allow scrolling inside tablet screen ONLY when Parent Dashboard is unlocked */
+body.tablet-beta-framed.parent-unlocked-mode #tablet-screen-viewport {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Keep Kiosk View & Modals Strictly Contained Inside Tablet Viewport */
+body.tablet-beta-framed #kiosk-view {
+  min-height: 100% !important;
+  height: 100% !important;
+  max-height: 100% !important;
+}
+
+body.tablet-beta-framed #alarm-ring-modal,
+body.tablet-beta-framed #pin-modal,
+body.tablet-beta-framed #edit-modal,
+body.tablet-beta-framed #pwa-install-modal {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Full Window Mode Adjustments (when top bar is shown without bezel) */
+body.tablet-beta-fullwindow:not(.beta-bar-minimized) #kiosk-view {
+  min-height: calc(100vh - 58px) !important;
+}
+
+/* Night/Evening Contrast Polish for Discreet Parent Hold Button */
+.sky-evening #btn-parent-hold,
+.sky-sleep #btn-parent-hold {
+  background: rgba(255, 255, 255, 0.14);
+  color: #f8fafc;
+}
+
+/* ==================== EXACT TABLET BREAKPOINT FIDELITY ==================== */
+
+/* 1. Landscape Tablet Fidelity (1024x768 & 1180x820 in Simulator + Real Physical Landscape Tablets) */
+body.tablet-beta-framed.sim-orient-landscape #kiosk-view {
+  padding: 16px 24px !important;
+}
+
+body.tablet-beta-framed.sim-orient-landscape #kiosk-center-grid {
+  display: grid !important;
+  grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+body.tablet-beta-framed.sim-orient-landscape #kiosk-center-grid > div {
+  grid-column: span 6 / span 6 !important;
+}
+
+body.tablet-beta-framed.sim-orient-landscape #kiosk-clock {
+  font-size: 3.85rem !important;
+  line-height: 1 !important;
+}
+
+body.tablet-beta-framed.sim-orient-landscape #kiosk-activity-card {
+  padding: 18px 22px !important;
+  border-radius: 24px !important;
+}
+
+body.tablet-beta-framed.sim-orient-landscape #kiosk-title {
+  font-size: 1.95rem !important;
+  line-height: 1.12 !important;
+  margin-bottom: 6px !important;
+}
+
+body.tablet-beta-framed.sim-orient-landscape #kiosk-subtitle {
+  font-size: 1.02rem !important;
+  line-height: 1.32 !important;
+}
+
+body.tablet-beta-framed.sim-orient-landscape #kiosk-zoom-kid-banner {
+  margin-top: 10px !important;
+  padding: 10px 12px !important;
+}
+
+body.tablet-beta-framed.sim-orient-landscape #kiosk-phrases-box {
+  margin-top: 10px !important;
+  padding-top: 10px !important;
+}
+
+body.tablet-beta-framed.sim-orient-landscape #kiosk-phrases-list button {
+  padding: 6px 12px !important;
+  font-size: 0.88rem !important;
+}
+
+/* Also apply the same clean fit on Gabriel's real physical tablet when height <= 840px in landscape! */
+@media (min-width: 960px) and (max-height: 840px) {
+  #kiosk-view {
+    padding: 16px 24px !important;
+  }
+  #kiosk-clock {
+    font-size: 3.85rem !important;
+  }
+  #kiosk-activity-card {
+    padding: 18px 22px !important;
+  }
+  #kiosk-title {
+    font-size: 1.95rem !important;
+    margin-bottom: 6px !important;
+  }
+  #kiosk-subtitle {
+    font-size: 1.02rem !important;
+  }
+  #kiosk-zoom-kid-banner {
+    margin-top: 10px !important;
+    padding: 10px 12px !important;
+  }
+  #kiosk-phrases-box {
+    margin-top: 10px !important;
+    padding-top: 10px !important;
+  }
+}
+
+/* 2. Portrait Tablet Fidelity (768x1024 in Simulator - overrides desktop @media lg:grid-cols-12!) */
+body.tablet-beta-framed.sim-orient-portrait #kiosk-view {
+  padding: 18px 22px !important;
+}
+
+body.tablet-beta-framed.sim-orient-portrait #kiosk-center-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 16px !important;
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
+}
+
+body.tablet-beta-framed.sim-orient-portrait #kiosk-center-grid > div {
+  grid-column: span 1 / span 1 !important;
+}
+
+body.tablet-beta-framed.sim-orient-portrait #kiosk-illust-frame {
+  max-width: 540px !important;
+  aspect-ratio: 16 / 9.2 !important;
+}
+
+body.tablet-beta-framed.sim-orient-portrait #kiosk-clock {
+  font-size: 3.5rem !important;
+  line-height: 1 !important;
+}
+
+body.tablet-beta-framed.sim-orient-portrait #kiosk-activity-card {
+  padding: 18px 22px !important;
+  border-radius: 24px !important;
+}
+
+body.tablet-beta-framed.sim-orient-portrait #kiosk-title {
+  font-size: 1.85rem !important;
+  line-height: 1.12 !important;
+  margin-bottom: 6px !important;
+}
+
+body.tablet-beta-framed.sim-orient-portrait #kiosk-subtitle {
+  font-size: 1rem !important;
+}
+
+body.tablet-beta-framed.sim-orient-portrait #kiosk-zoom-kid-banner {
+  margin-top: 10px !important;
+  padding: 10px 12px !important;
+}
+
+body.tablet-beta-framed.sim-orient-portrait #kiosk-phrases-box {
+  margin-top: 10px !important;
+  padding-top: 10px !important;
+}
+
+/* Alarm Ring Modal Compact Fit inside 768px Tablet Height */
+body.tablet-beta-framed #alarm-ring-modal > div {
+  max-width: 580px !important;
+  padding: 20px 24px !important;
+}
+
+body.tablet-beta-framed #alarm-ring-modal #ring-title {
+  font-size: 2rem !important;
+}
