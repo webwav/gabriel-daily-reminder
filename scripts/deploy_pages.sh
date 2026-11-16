@@ -27,16 +27,27 @@ if [ -d "./data/tts_cache" ]; then
 fi
 touch ./public/.nojekyll
 
-# 3. Push clean static build from public/ to gh-pages branch
+# 3. Push static build from public/ to gh-pages branch incrementally
 TMP_DEPLOY="$(mktemp -d)"
 trap 'rm -rf "$TMP_DEPLOY"' EXIT
 
-rsync -a --exclude='.DS_Store' ./public/ "$TMP_DEPLOY/"
-git -C "$TMP_DEPLOY" init -b gh-pages
+REMOTE_URL="$(git remote get-url origin)"
+if git ls-remote --exit-code --heads "$REMOTE_URL" gh-pages >/dev/null 2>&1; then
+  git clone --depth 1 --branch gh-pages "$REMOTE_URL" "$TMP_DEPLOY" >/dev/null 2>&1
+  rsync -a --delete --exclude='.git' --exclude='.DS_Store' ./public/ "$TMP_DEPLOY/"
+else
+  rsync -a --exclude='.DS_Store' ./public/ "$TMP_DEPLOY/"
+  git -C "$TMP_DEPLOY" init -b gh-pages
+  git -C "$TMP_DEPLOY" remote add origin "$REMOTE_URL"
+fi
+
 git -C "$TMP_DEPLOY" config user.name "webwav"
 git -C "$TMP_DEPLOY" config user.email "webwav@users.noreply.github.com"
 git -C "$TMP_DEPLOY" add -A
-git -C "$TMP_DEPLOY" commit -m "Deploy Gabriel Daily Reminder PWA ($(date -u '+%Y-%m-%d %H:%M UTC'))"
-REMOTE_URL="$(git remote get-url origin)"
-git -C "$TMP_DEPLOY" push --force "$REMOTE_URL" gh-pages:gh-pages
-echo "Deployed static PWA to gh-pages on $REMOTE_URL"
+if git -C "$TMP_DEPLOY" diff --cached --quiet; then
+  echo "gh-pages already up to date."
+else
+  git -C "$TMP_DEPLOY" commit -m "Deploy Gabriel Daily Reminder PWA ($(date -u '+%Y-%m-%d %H:%M UTC'))"
+  git -C "$TMP_DEPLOY" push origin gh-pages:gh-pages
+  echo "Deployed static PWA to gh-pages on $REMOTE_URL"
+fi

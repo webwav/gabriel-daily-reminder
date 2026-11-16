@@ -1490,14 +1490,17 @@ async function loadInitialStateDualMode() {
 
 function registerServiceWorker() {
   if (!("serviceWorker" in navigator)) return;
-  const isLocalDev = ["localhost", "127.0.0.1", "::1"].includes(window.location.hostname);
-  if (isLocalDev) return;
-  window.addEventListener("load", () => {
+  const doRegister = () => {
     navigator.serviceWorker
-      .register("./sw.js?v=2")
+      .register("./sw.js?v=3")
       .then((reg) => reg.update().catch(() => {}))
       .catch(() => {});
-  });
+  };
+  if (document.readyState === "complete") {
+    doRegister();
+  } else {
+    window.addEventListener("load", doRegister, { once: true });
+  }
 }
 
 async function init() {
