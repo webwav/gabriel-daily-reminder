@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#0284c7" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Gabriel Alarm" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <title>Gabriel Daily Reminder - Kiosk Schedule & Full English Plan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tablet-beta.css" />
+  <style>
+    :root {
+      --font-kid: 'Fredoka', system-ui, -apple-system, sans-serif;
+      --font-body: 'Nunito', system-ui, -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      overscroll-behavior: none;
+    }
+    .font-kid { font-family: var(--font-kid); letter-spacing: 0.01em; }
+    .kiosk-locked {
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+    /* Time-of-day ambient sky themes */
+    .sky-morning { background: linear-gradient(135deg, #fffbeb 0%, #e0f2fe 52%, #bae6fd 100%); color: #0f172a; }
+    .sky-day     { background: linear-gradient(135deg, #ecfeff 0%, #dbeafe 55%, #e0e7ff 100%); color: #0f172a; }
+    .sky-sunset  { background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 48%, #fde68a 100%); color: #1e293b; }
+    .sky-evening { background: linear-gradient(135deg, #2e1a12 0%, #451a03 55%, #1e1b4b 100%); color: #fef3c7; }
+    .sky-sleep   { background: linear-gradient(135deg, #090d16 0%, #0f172a 60%, #172554 100%); color: #cbd5e1; }
+
+    @keyframes gentleFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    @keyframes alarmBounce {
+      0%, 100% { transform: scale(1) rotate(0deg); }
+      25% { transform: scale(1.03) rotate(-1deg); }
+      75% { transform: scale(1.03) rotate(1deg); }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.55); }
+      50% { box-shadow: 0 0 0 18px rgba(16, 185, 129, 0); }
+    }
+    .illust-float { animation: gentleFloat 4s ease-in-out infinite; }
+    .alarm-card-anim { animation: alarmBounce 1.8s ease-in-out infinite; }
+    .btn-ready-glow { animation: pulseGlow 1.8s infinite; }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- ==================== LOCKED KID KIOSK VIEW (DEFAULT ON TABLET) ==================== -->
+  <div id="kiosk-view" class="kiosk-locked min-h-screen w-full flex flex-col justify-between p-4 md:p-7 sky-day transition-colors duration-700 relative overflow-hidden">
+
+    <!-- Top Bar: Avatar + Clock + Install App + Discreet Hold-2s Parent Gate -->
+    <div class="flex items-center justify-between gap-4 z-10">
+      <div class="flex items-center gap-3 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full shadow-md border border-white/60 text-slate-800">
+        <img src="assets/gabriel-avatar.jpg" alt="Gabriel" class="w-11 h-11 rounded-full object-cover border-2 border-sky-400" />
+        <div>
+          <div class="font-kid font-bold text-base md:text-lg leading-tight">Gabriel's Daily Reminder</div>
+          <div id="kiosk-date-label" class="text-xs font-extrabold text-sky-700 uppercase tracking-wider">Monday, 16 Nov</div>
+        </div>
+      </div>
+
+      <!-- Simulated Preview Banner (only visible when Parent previews another slot) -->
+      <div id="kiosk-sim-banner" class="hidden items-center gap-2 bg-amber-400 text-slate-900 px-4 py-1.5 rounded-full font-extrabold text-xs md:text-sm shadow">
+        <span>PREVIEW MODE</span>
+        <button id="btn-exit-sim" class="underline font-black ml-1">Back to Live Clock</button>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <!-- Install App Button (automatically hidden once installed as standalone PWA) -->
+        <button id="btn-kiosk-install-pwa"
+          class="pwa-install-trigger flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-gradient-to-r from-amber-300 to-amber-400 hover:from-amber-200 hover:to-amber-300 active:scale-95 text-slate-950 text-xs font-black shadow-md border border-white/80 transition"
+          title="Install Gabriel Daily Reminder ke perangkat ini">
+          <span>📲</span>
+          <span>Install App</span>
+        </button>
+
+        <!-- Discreet Hold-to-Unlock Parent Button -->
+        <button id="btn-parent-hold"
+          class="relative select-none flex items-center gap-2 px-3.5 py-2 rounded-full bg-black/10 hover:bg-black/15 text-xs font-bold opacity-60 hover:opacity-100 transition overflow-hidden"
+          title="Parent Only: Press and hold 2 seconds (PIN 1996)">
+          <div id="hold-progress-bar" class="absolute left-0 top-0 bottom-0 bg-sky-500/40 w-0 transition-none"></div>
+          <span class="relative z-10">🔒 Parent (Hold 2s)</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Center Stage: Giant Illustration + Giant Activity Readout -->
+    <div class="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-5 md:gap-7 items-center my-3 z-10 max-w-7xl w-full mx-auto">
+
+      <!-- Left: Storybook Illustration Card -->
+      <div class="lg:col-span-6 flex flex-col items-center justify-center">
+        <div class="relative w-full max-w-xl aspect-video rounded-[32px] overflow-hidden shadow-2xl border-[6px] border-white/85 bg-slate-200 illust-float">
+          <img id="kiosk-illustration" src="illustrations/morning-breakfast.jpg" alt="Current Activity" class="w-full h-full object-cover" />
+          <!-- Category Pill -->
+          <div id="kiosk-category-badge" class="absolute top-4 left-4 px-4 py-1.5 rounded-full font-kid font-bold text-sm md:text-base shadow-lg bg-sky-600 text-white">
+            ACTIVITY NOW
+          </div>
+          <!-- English Speaking Badge -->
+          <div id="kiosk-english-pill" class="hidden absolute top-4 right-4 px-4 py-1.5 rounded-full font-kid font-bold text-sm md:text-base shadow-lg bg-emerald-500 text-white flex items-center gap-1.5">
+            <span>🗣️ SPEAK ENGLISH!</span>
+          </div>
+          <!-- Time Window Pill -->
+          <div id="kiosk-slot-window" class="absolute bottom-3 right-4 px-4 py-1 rounded-full font-extrabold text-sm bg-slate-900/80 text-white backdrop-blur-sm">
+            08:00 - 08:35
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Giant Clock + Activity Text + Kid Starter Phrases -->
+      <div class="lg:col-span-6 flex flex-col justify-center space-y-4">
+        <!-- Giant Digital Clock -->
+        <div class="flex items-baseline gap-3">
+          <div id="kiosk-clock" class="font-kid font-bold text-6xl sm:text-7xl md:text-8xl tracking-tight leading-none drop-shadow-sm">
+            12:45
+          </div>
+          <div id="kiosk-ampm" class="font-kid font-bold text-xl md:text-2xl opacity-80">WIB</div>
+        </div>
+
+        <!-- Giant Activity Card -->
+        <div id="kiosk-activity-card" class="bg-white/90 backdrop-blur-md text-slate-900 rounded-[28px] p-5 md:p-7 shadow-xl border-2 border-white">
+          <div class="text-xs font-black uppercase tracking-widest text-sky-600 mb-1" id="kiosk-now-label">SEKARANG / RIGHT NOW</div>
+          <h1 id="kiosk-title" class="font-kid font-bold text-3xl sm:text-4xl md:text-[42px] leading-[1.12] text-slate-900 mb-2.5">
+            CLOUD PILLOW REST TIME
+          </h1>
+          <p id="kiosk-subtitle" class="text-base md:text-xl font-bold text-slate-600 leading-snug">
+            Rest your body and prop your legs on your cloud pillow!
+          </p>
+
+          <!-- Zoom Kid Notice (No Link! Instructs Gabriel to call Mama/Papa) -->
+          <div id="kiosk-zoom-kid-banner" class="hidden mt-4 bg-blue-50 border-2 border-blue-300 rounded-2xl p-3.5 flex items-center gap-3 text-blue-900">
+            <span class="text-3xl">💻</span>
+            <div>
+              <div class="font-kid font-bold text-base md:text-lg">KELAS LIVE ZOOM!</div>
+              <div class="text-sm font-bold text-blue-700">Panggil Mama / Papa untuk bukakan Zoom ya! (Tablet tetap terkunci)</div>
+            </div>
+          </div>
+
+          <!-- Leg-Safe Comfort Pill -->
+          <div class="mt-4 inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-900 px-3.5 py-2 rounded-2xl text-sm md:text-base font-extrabold">
+            <span>🛋️</span>
+            <span id="kiosk-leg-note">Keep your feet resting comfortably on your soft pillow!</span>
+          </div>
+
+          <!-- Full English Starter Phrases (Tap to Hear Voice - Zero External Links!) -->
+          <div id="kiosk-phrases-box" class="mt-4 pt-4 border-t border-slate-200/80">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-black uppercase tracking-wider text-emerald-700">🗣️ Try Saying in English (Tap to Listen):</span>
+            </div>
+            <div id="kiosk-phrases-list" class="flex flex-wrap gap-2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar: Gentle Progress Bar + Next Activity Preview -->
+    <div class="max-w-7xl w-full mx-auto bg-white/80 backdrop-blur-md text-slate-800 rounded-2xl px-5 py-3 shadow-md border border-white/70 flex flex-col sm:flex-row items-center justify-between gap-3 z-10">
+      <div class="w-full sm:w-1/2 flex items-center gap-3">
+        <span id="kiosk-mins-left" class="font-kid font-bold text-sm md:text-base whitespace-nowrap text-sky-700">25 min left</span>
+        <div class="flex-1 h-3.5 bg-slate-200 rounded-full overflow-hidden">
+          <div id="kiosk-progress-fill" class="h-full bg-gradient-to-r from-sky-400 to-emerald-400 rounded-full transition-all duration-500" style="width: 45%"></div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 text-sm md:text-base font-extrabold text-slate-700">
+        <span class="px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-700 text-xs uppercase font-black">Next</span>
+        <span id="kiosk-next-label">13:50 - Cozy Snack & Storybook at Home!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FULL-SCREEN ALARM RINGING MODAL (KID VIEW) ==================== -->
+  <div id="alarm-ring-modal" class="hidden fixed inset-0 z-50 bg-slate-900/85 backdrop-blur-md flex items-center justify-center p-4 kiosk-locked">
+    <div class="alarm-card-anim bg-white rounded-[36px] max-w-2xl w-full p-6 md:p-8 shadow-2xl border-4 border-amber-300 text-center space-y-5">
+      <div class="inline-flex items-center gap-2 px-5 py-1.5 rounded-full bg-amber-100 text-amber-900 font-kid font-bold text-lg">
+        🔔 DING DONG! WAKTU KEGIATAN BARU!
+      </div>
+      <div class="w-full aspect-video rounded-3xl overflow-hidden border-4 border-sky-100 shadow-lg bg-slate-100">
+        <img id="ring-illustration" src="illustrations/zoom-class.jpg" alt="Alarm Activity" class="w-full h-full object-cover" />
+      </div>
+      <div>
+        <div id="ring-time" class="text-sm font-black uppercase tracking-widest text-sky-600 mb-1">08:00 - 09:10 WIB</div>
+        <h2 id="ring-title" class="font-kid font-bold text-3xl md:text-5xl text-slate-900 leading-tight">
+          ZOOM LIVE: DARING RUTIN 1B
+        </h2>
+        <p id="ring-subtitle" class="mt-2 text-lg md:text-xl font-bold text-slate-600">
+          Call Mama/Papa to open Bu Nining's Zoom! Keep feet comfy on your cushion.
+        </p>
+      </div>
+      <button id="btn-dismiss-alarm"
+        class="btn-ready-glow w-full py-5 rounded-2xl bg-emerald-500 hover:bg-emerald-600 active:scale-[0.98] text-white font-kid font-bold text-2xl md:text-3xl shadow-xl transition">
+        ✅ I'M READY! / AKU SIAP!
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== PARENT PIN UNLOCK MODAL ==================== -->
+  <div id="pin-modal" class="hidden fixed inset-0 z-50 bg-slate-900/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl space-y-4 text-center">
+      <div class="text-3xl">🔐</div>
+      <h3 class="font-kid font-bold text-2xl text-slate-900">Parent Mode Unlock</h3>
+      <p class="text-sm text-slate-500 font-semibold">Enter Parent PIN to edit Gabriel's schedule, launch Zoom links, or open the Full English Plan. <span class="text-slate-400">(Default PIN: 1996)</span></p>
+      <input id="pin-input" type="password" inputmode="numeric" maxlength="6" placeholder="••••"
+        class="w-full text-center text-3xl tracking-[0.4em] font-black py-3 border-2 border-slate-200 rounded-2xl focus:outline-none focus:border-sky-500" />
+      <div id="pin-error" class="hidden text-sm font-bold text-rose-600">Incorrect PIN. Try 1996.</div>
+      <div class="flex gap-3 pt-1">
+        <button id="btn-pin-cancel" class="flex-1 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 font-bold text-slate-700">Cancel</button>
+        <button id="btn-pin-submit" class="flex-1 py-3 rounded-xl bg-sky-600 hover:bg-sky-700 font-bold text-white shadow">Unlock</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== UNLOCKED PARENT DASHBOARD (3 TABS) ==================== -->
+  <div id="parent-view" class="hidden min-h-screen bg-slate-50 text-slate-900 pb-16">
+
+    <!-- Sticky Parent Header & 3 Tabs -->
+    <header class="sticky top-0 z-30 bg-white border-b border-slate-200 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 py-3 flex flex-wrap items-center justify-between gap-3">
+        <div class="flex items-center gap-3">
+          <img src="assets/gabriel-avatar.jpg" alt="Gabriel" class="w-10 h-10 rounded-full object-cover border-2 border-sky-500" />
+          <div>
+            <div class="font-kid font-bold text-lg text-slate-900">Gabriel Daily Reminder - Parent Control</div>
+            <div class="text-xs font-bold text-slate-500">Kelas 1B Bonsai (Bu Nining) • Amber 4 Zoom • Leg-Safe • <span class="text-amber-600">Offline Events Postponed -> Dec 2026</span></div>
+          </div>
+        </div>
+
+        <!-- 3 Main Tabs -->
+        <nav class="flex flex-wrap items-center gap-1.5 bg-slate-100 p-1.5 rounded-2xl">
+          <button data-tab="schedule" class="parent-tab-btn px-4 py-2 rounded-xl text-sm font-extrabold bg-white text-sky-700 shadow-sm">
+            📅 1. Schedule & Zoom Hub
+          </button>
+          <button data-tab="english" class="parent-tab-btn px-4 py-2 rounded-xl text-sm font-extrabold text-slate-600 hover:text-slate-900">
+            🗣️ 2. Full English Speaking Plan
+          </button>
+          <button data-tab="kiosk-setup" class="parent-tab-btn px-4 py-2 rounded-xl text-sm font-extrabold text-slate-600 hover:text-slate-900">
+            📲 3. Install & Tablet Kiosk Setup
+          </button>
+        </nav>
+
+        <div class="flex flex-wrap items-center gap-2">
+          <button id="btn-parent-install-pwa" class="pwa-install-trigger px-3.5 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 text-xs sm:text-sm font-extrabold shadow-sm flex items-center gap-1.5">
+            <span>📲</span><span>Install App</span>
+          </button>
+          <button id="btn-test-current-alarm" class="px-3.5 py-2 rounded-xl bg-amber-100 hover:bg-amber-200 text-amber-900 text-xs sm:text-sm font-extrabold">
+            🔔 Test Chime Now
+          </button>
+          <button id="btn-relock-kiosk" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-extrabold shadow">
+            🔒 Lock to Kid Screen
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 md:px-6 pt-6 space-y-6">
+
+      <!-- ==================== TAB 1: SCHEDULE & ZOOM HUB ==================== -->
+      <section id="tab-schedule" class="space-y-6">
+
+        <!-- Quick Class Alignment Controls (Zero Guesswork!) -->
+        <div class="bg-white rounded-3xl p-5 md:p-6 shadow-sm border border-slate-200 space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <h2 class="font-kid font-bold text-xl text-slate-900">Verified Class & Zoom Settings (Kelas 1B Bonsai & Living English)</h2>
+              <p class="text-sm text-slate-500 font-semibold">Changes immediately update Gabriel's daily alarms and save to disk automatically.</p>
+            </div>
+            <span id="save-status-pill" class="text-xs font-extrabold px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+              ✓ Saved to localhost
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- Daring Rutin 1B Slot -->
+            <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200">
+              <label class="block text-xs font-black uppercase text-slate-500 mb-1">SMM Daring Rutin 1B (Sel & Kam)</label>
+              <select id="cfg-daring-slot" class="w-full bg-white border border-slate-300 rounded-xl px-3 py-2 text-sm font-bold">
+                <option value="morning">Pagi: 08:00 - 09:10 WIB (Recommended)</option>
+                <option value="afternoon">Sore: 16:00 - 17:10 WIB</option>
+              </select>
+              <div class="text-[11px] text-slate-500 mt-1 font-semibold">Bu Nining • ID: 934 2915 1232 (SD1SMM)</div>
+            </div>
+
+            <!-- Amber 4 Day Selector -->
+            <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200">
+              <label class="block text-xs font-black uppercase text-slate-500 mb-1">Amber 4 Online Zoom (16:00-17:15)</label>
+              <select id="cfg-amber4-days" class="w-full bg-white border border-slate-300 rounded-xl px-3 py-2 text-sm font-bold">
+                <option value="tue">Selasa (16:00 - 17:15 WIB)</option>
+                <option value="thu">Kamis (16:00 - 17:15 WIB)</option>
+                <option value="tue,thu">Selasa & Kamis (16:00 - 17:15 WIB)</option>
+                <option value="fri">Jumat (16:00 - 17:15 WIB)</option>
+                <option value="off">Off / Tidak Aktif</option>
+              </select>
+              <div class="text-[11px] text-slate-500 mt-1 font-semibold">Zoom ID: 943 3313 7819</div>
+            </div>
+
+            <!-- Waydivers 5 Backup Online -->
+            <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200">
+              <label class="block text-xs font-black uppercase text-slate-500 mb-1">Waydivers 5 Online (18:15-19:00)</label>
+              <select id="cfg-waydivers5-day" class="w-full bg-white border border-slate-300 rounded-xl px-3 py-2 text-sm font-bold">
+                <option value="off">Off (Pakai Amber 4 / Rekaman LMS)</option>
+                <option value="wed">Rabu 18:15 - 19:00 (Ms. Sarah)</option>
+                <option value="thu">Kamis 18:15 - 19:00 (Ms. Sarah)</option>
+              </select>
+              <div class="text-[11px] text-slate-500 mt-1 font-semibold">ID: 939 3225 0068 (Pass: LEOnline)</div>
+            </div>
+
+            <!-- Agama Kelas 1B Selector -->
+            <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200">
+              <label class="block text-xs font-black uppercase text-slate-500 mb-1">SMM Agama Kelas 1B Zoom</label>
+              <select id="cfg-agama" class="w-full bg-white border border-slate-300 rounded-xl px-3 py-2 text-sm font-bold">
+                <option value="none">Belum Dipilih / Mandiri</option>
+                <option value="katolik">Katolik (Jumat 16:00 - Bu Sandio)</option>
+                <option value="kristen">Kristen (Senin 15:00 - Bu Bonita)</option>
+                <option value="islam">Islam (Senin 09:00 - Bu Riha)</option>
+                <option value="buddha">Buddha (Jumat 17:00 2-mingguan)</option>
+                <option value="hindu">Hindu (Jumat 17:00 2-mingguan)</option>
+              </select>
+              <div id="agama-conflict-note" class="text-[11px] text-amber-700 mt-1 font-bold"></div>
+            </div>
+          </div>
+
+          <!-- Voice & Phrases Toggles -->
+          <div class="flex flex-wrap items-center gap-6 pt-2 border-t border-slate-100 text-sm font-bold text-slate-700">
+            <label class="inline-flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" id="cfg-voice-chime" class="w-4 h-4 accent-sky-600" checked />
+              <span>🔊 Speak Activity Aloud When Alarm Chimes</span>
+            </label>
+            <label class="inline-flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" id="cfg-show-phrases" class="w-4 h-4 accent-emerald-600" checked />
+              <span>🗣️ Show Tap-to-Listen English Starter Phrases on Kid Screen</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Day Picker + Add Alarm Button -->
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <div id="day-selector" class="flex flex-wrap gap-1.5 bg-white p-1.5 rounded-2xl border border-slate-200 shadow-sm"></div>
+          <button id="btn-add-block" class="px-4 py-2.5 rounded-2xl bg-sky-600 hover:bg-sky-700 text-white text-sm font-extrabold shadow">
+            + Add Alarm Block
+          </button>
+        </div>
+
+        <!-- Daily Alarm Timeline List -->
+        <div id="schedule-list" class="space-y-3"></div>
+
+        <!-- Verified Master Zoom & Offline Links Table (Parent Only!) -->
+        <div class="bg-white rounded-3xl p-5 md:p-6 shadow-sm border border-slate-200 space-y-3">
+          <h3 class="font-kid font-bold text-lg text-slate-900">🔗 Parent-Only Quick Zoom & Portal Directory</h3>
+          <p class="text-xs text-slate-500 font-semibold">All Zoom URLs are hidden when locked in Kid Kiosk Mode so Gabriel cannot leave the alarm screen.</p>
+          <div id="zoom-directory-grid" class="grid grid-cols-1 md:grid-cols-2 gap-3"></div>
+        </div>
+      </section>
+
+      <!-- ==================== TAB 2: FULL ENGLISH SPEAKING PLAN ==================== -->
+      <section id="tab-english" class="hidden space-y-6">
+
+        <!-- Hero Banner & Active Phase Selector -->
+        <div class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white rounded-3xl p-6 md:p-7 shadow-lg space-y-4">
+          <div class="flex flex-wrap items-start justify-between gap-4">
+            <div class="max-w-3xl">
+              <div class="text-xs font-black uppercase tracking-widest text-emerald-200">IMMERSION ROADMAP FOR GABRIEL (6 Y/O)</div>
+              <h2 class="font-kid font-bold text-2xl md:text-3xl mt-1">Full English Speaking Plan at Home</h2>
+              <p class="text-sm md:text-base text-emerald-50 font-semibold mt-1">
+                Syncs directly with Gabriel's Daily Alarm! Picking a phase below automatically switches Gabriel's tablet alarm cards, voice chimes, and tap-to-hear starter phrases to English so speaking full English becomes an effortless daily habit.
+              </p>
+            </div>
+            <div class="bg-white/15 backdrop-blur-md rounded-2xl px-4 py-3 text-center border border-white/20">
+              <div class="text-xs uppercase font-black text-emerald-100">Today's English Blocks</div>
+              <div id="english-coverage-stat" class="font-kid font-bold text-3xl">85%</div>
+            </div>
+          </div>
+
+          <div id="english-phases-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 pt-2"></div>
+        </div>
+
+        <!-- 4 Golden Rules + Daily Habit Checklist -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <div class="lg:col-span-7 bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-4">
+            <h3 class="font-kid font-bold text-xl text-slate-900">✨ 4 Stress-Free Rules So Gabriel Loves Speaking English</h3>
+            <div class="space-y-3 text-sm">
+              <div class="p-3.5 rounded-2xl bg-emerald-50 border border-emerald-200">
+                <div class="font-extrabold text-emerald-900">1. The "Warm Recast" Rule (Never Say "Speak English!")</div>
+                <p class="text-emerald-800 font-semibold mt-0.5">If Gabriel says <em>"Mama mau minum susu"</em>, smile warmly and model it naturally: <strong>"Oh, 'Can I have milk, please?' Yes! Let's pour your milk!"</strong> He hears the exact phrase right when he cares about it, with zero pressure.</p>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-sky-50 border border-sky-200">
+                <div class="font-extrabold text-sky-900">2. Give 2-Choice English Prompts When Stuck</div>
+                <p class="text-sky-800 font-semibold mt-0.5">Open questions like <em>"How was class?"</em> are hard at age 6. Instead ask: <strong>"Did you play flashcards or sing a song at Tebet today?"</strong> The words he needs are right inside your question!</p>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-amber-50 border border-amber-200">
+                <div class="font-extrabold text-amber-900">3. Let the Tablet Alarm Be the Fun Signal</div>
+                <p class="text-amber-800 font-semibold mt-0.5">Whenever Gabriel's alarm shows the green <strong>🗣️ SPEAK ENGLISH!</strong> pill, make it a team game: <em>"Ooh, the alarm switched our English brains ON! Let's tap the speaker button together!"</em></p>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-purple-50 border border-purple-200">
+                <div class="font-extrabold text-purple-900">4. Sore-Leg & Big-Feelings Safety Valve</div>
+                <p class="text-purple-800 font-semibold mt-0.5">If his recovering leg hurts or he feels tired/upset, comfort him first in whichever language comes out, then gently give the simple English words (<em>"My leg feels tired, let's rest on the pillow"</em>).</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Daily Speaking Habit Tracker -->
+          <div class="lg:col-span-5 bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-4">
+            <div class="flex items-center justify-between">
+              <h3 class="font-kid font-bold text-xl text-slate-900">✅ Today's English Wins</h3>
+              <span id="habit-today-date" class="text-xs font-extrabold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full">Today</span>
+            </div>
+            <div id="english-habits-list" class="space-y-2.5"></div>
+
+            <!-- Custom Weekly Phrases -->
+            <div class="pt-4 border-t border-slate-100 space-y-2.5">
+              <div class="font-kid font-bold text-base text-slate-900">🎯 Bridge Phrases Gabriel Is Practicing</div>
+              <div id="custom-phrases-list" class="space-y-2"></div>
+              <div class="flex gap-2 pt-1">
+                <input id="new-phrase-input" type="text" placeholder="Add new English phrase..."
+                  class="flex-1 border border-slate-300 rounded-xl px-3 py-2 text-sm font-semibold" />
+                <button id="btn-add-phrase" class="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-extrabold">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Daily Situation Scripts Linked to Alarm Blocks -->
+        <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-4">
+          <div>
+            <h3 class="font-kid font-bold text-xl text-slate-900">🎬 Daily Alarm Conversation Scripts (Tap 🔊 to Hear!)</h3>
+            <p class="text-sm text-slate-500 font-semibold">Ready-to-use Mama & Gabriel dialogues matched to each part of his day.</p>
+          </div>
+          <div id="situation-scripts-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+        </div>
+
+        <!-- Parent Notes -->
+        <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-2">
+          <label class="font-kid font-bold text-lg text-slate-900 block">📝 Mama's Weekly English Observation Notes</label>
+          <textarea id="english-parent-notes" rows="3"
+            class="w-full border border-slate-300 rounded-2xl p-3.5 text-sm font-semibold focus:outline-none focus:border-emerald-500"></textarea>
+        </div>
+      </section>
+
+      <!-- ==================== TAB 3: TABLET KIOSK LOCK SETUP ==================== -->
+      <section id="tab-kiosk-setup" class="hidden space-y-6">
+        <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-200 shadow-sm space-y-6">
+          <div class="flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <h2 class="font-kid font-bold text-2xl text-slate-900">🔒 How to Lock Gabriel's Tablet to ONLY This Alarm App</h2>
+              <p class="text-sm text-slate-600 font-semibold mt-1">So Gabriel cannot swipe home, open YouTube/Safari/games, or tap out of his schedule.</p>
+            </div>
+            <button id="btn-enter-fullscreen-kiosk" class="px-5 py-3 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-kid font-bold text-lg shadow-lg">
+              🚀 Enter Fullscreen Kid Kiosk Now
+            </button>
+          </div>
+
+          <!-- Direct PWA App Install Banner -->
+          <div class="p-5 rounded-2xl bg-gradient-to-r from-sky-600 to-indigo-700 text-white flex flex-wrap items-center justify-between gap-4 shadow-md">
+            <div class="space-y-1 max-w-2xl">
+              <div class="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-white/20 text-xs font-black uppercase tracking-wider">
+                <span id="pwa-status-badge">📲 Progressive Web App (Offline-Ready)</span>
+              </div>
+              <div class="font-kid font-bold text-xl">Install Aplikasi Gabriel Daily Reminder</div>
+              <p class="text-xs sm:text-sm text-sky-100 font-semibold">
+                Install langsung ke Home Screen tablet Android, iPad, iPhone, atau laptop tanpa App Store. Berjalan layar penuh tanpa address bar dan tetap jalan walaupun Wi-Fi putus!
+              </p>
+            </div>
+            <button id="btn-tab-install-pwa" class="px-5 py-3 rounded-2xl bg-amber-400 hover:bg-amber-300 active:scale-95 text-slate-950 font-kid font-bold text-base sm:text-lg shadow-lg flex items-center gap-2">
+              <span>📲</span><span>Install Aplikasi Sekarang</span>
+            </button>
+          </div>
+
+          <!-- Web / Wi-Fi Tablet URL Box -->
+          <div class="p-4 rounded-2xl bg-sky-50 border border-sky-200 flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <div class="text-xs font-black uppercase text-sky-700">Open This URL on Gabriel's Tablet / Phone</div>
+              <div id="tablet-lan-url" class="font-mono font-black text-base sm:text-xl text-sky-950 mt-0.5 break-all">https://webwav.github.io/gabriel-daily-reminder/</div>
+            </div>
+            <button id="btn-copy-lan" class="px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-700 text-white text-sm font-extrabold">Copy App URL</button>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <!-- iPad Instructions -->
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2.5">
+              <div class="font-kid font-bold text-lg text-slate-900">🍎 Option A: iPad (Guided Access - 100% Hardware Locked)</div>
+              <ol class="list-decimal list-inside space-y-1.5 text-sm font-semibold text-slate-700">
+                <li>Open Safari on Gabriel's iPad to the URL above, tap <strong>Share → Add to Home Screen</strong>, and open <strong>Gabriel Alarm</strong> from the Home Screen (removes Safari address bar!).</li>
+                <li>On iPad, open <strong>Settings → Accessibility → Guided Access</strong> → turn <strong>ON</strong> & set a Passcode.</li>
+                <li>Open <strong>Gabriel Alarm</strong>, then <strong>Triple-Click the Top / Power Button</strong> → tap <strong>Start</strong>.</li>
+                <li>Done! Home swipe, notifications, Dock, and switching apps are <strong>100% disabled by iPadOS</strong>. Gabriel only sees the illustrated activity alarm!</li>
+              </ol>
+            </div>
+
+            <!-- Android Tablet Instructions -->
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2.5">
+              <div class="font-kid font-bold text-lg text-slate-900">🤖 Option B: Android / Samsung Tablet (App Pinning)</div>
+              <ol class="list-decimal list-inside space-y-1.5 text-sm font-semibold text-slate-700">
+                <li>Open Chrome on the tablet to the URL above → tap <strong>⋮ Menu → Add to Home screen / Install App</strong>.</li>
+                <li>Go to <strong>Settings → Security & Privacy → More Security Settings → App Pinning (Pin Windows)</strong> → turn <strong>ON</strong> + enable <em>"Ask for PIN before unpinning"</em>.</li>
+                <li>Open <strong>Gabriel Alarm</strong>, swipe up to Recent Apps, tap the app icon at top → tap <strong>Pin this app</strong>.</li>
+                <li>Done! Back, Home, and Recent buttons are completely locked until you enter your tablet PIN!</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- ==================== ADD / EDIT ALARM BLOCK MODAL ==================== -->
+  <div id="edit-modal" class="hidden fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl space-y-4 max-h-[92vh] overflow-y-auto">
+      <h3 id="edit-modal-heading" class="font-kid font-bold text-2xl text-slate-900">Edit Alarm Activity</h3>
+      <div class="grid grid-cols-2 gap-3">
+        <div>
+          <label class="text-xs font-black uppercase text-slate-500">Start Time</label>
+          <input id="ed-start" type="time" class="w-full border border-slate-300 rounded-xl px-3 py-2 font-bold" />
+        </div>
+        <div>
+          <label class="text-xs font-black uppercase text-slate-500">End Time</label>
+          <input id="ed-end" type="time" class="w-full border border-slate-300 rounded-xl px-3 py-2 font-bold" />
+        </div>
+      </div>
+      <div>
+        <label class="text-xs font-black uppercase text-slate-500">Activity Title (English Mode)</label>
+        <input id="ed-title-en" type="text" class="w-full border border-slate-300 rounded-xl px-3 py-2 font-bold" placeholder="LEGO & STORY PLAY!" />
+      </div>
+      <div>
+        <label class="text-xs font-black uppercase text-slate-500">Activity Title (Indonesian Mode)</label>
+        <input id="ed-title-id" type="text" class="w-full border border-slate-300 rounded-xl px-3 py-2 font-bold" placeholder="MAIN LEGO & CERITA" />
+      </div>
+      <div>
+        <label class="text-xs font-black uppercase text-slate-500">Kid Subtitle / Instructions</label>
+        <input id="ed-sub" type="text" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm font-semibold" />
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <div>
+          <label class="text-xs font-black uppercase text-slate-500">Category</label>
+          <select id="ed-cat" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm font-bold">
+            <option value="ZOOM">ZOOM LIVE</option>
+            <option value="OFFLINE">OFFLINE HUB TEBET</option>
+            <option value="ENGLISH">LIVING ENGLISH</option>
+            <option value="SMM">SMM ASYNC</option>
+            <option value="TOY">TOY PLAY</option>
+            <option value="BOOK">BOOK READING</option>
+            <option value="MOVE">SEATED STRETCH / ART</option>
+            <option value="MEAL">MEAL TIME</option>
+            <option value="REST">PILLOW LEG REST</option>
+            <option value="SLEEP">SLEEP</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-xs font-black uppercase text-slate-500">Kid Illustration</label>
+          <select id="ed-illust" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm font-bold">
+            <option value="morning-breakfast.jpg">🍳 Breakfast & Meals</option>
+            <option value="zoom-class.jpg">💻 Live Zoom Class</option>
+            <option value="living-english-hub.jpg">🏫 Living English Tebet Hub</option>
+            <option value="toy-play.jpg">🧱 Lego & Toy Play</option>
+            <option value="book-reading.jpg">📚 Storybook Reading</option>
+            <option value="gentle-stretch-art.jpg">🎨 Seated Stretch & Terrace Art</option>
+            <option value="rest-recharge.jpg">☁️ Cloud Pillow Leg Rest</option>
+            <option value="bedtime-sleep.jpg">🌙 Starlight Sleep</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label class="text-xs font-black uppercase text-slate-500">Kid English Phrases (comma separated)</label>
+        <input id="ed-phrases" type="text" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm font-semibold" placeholder="Good morning!, Can I have milk please?" />
+      </div>
+      <label class="inline-flex items-center gap-2 font-bold text-sm text-emerald-800 cursor-pointer">
+        <input id="ed-eng-mode" type="checkbox" class="w-4 h-4 accent-emerald-600" checked />
+        <span>🗣️ Full English Speaking Mode ON for this block</span>
+      </label>
+
+      <div class="flex justify-between gap-2 pt-2">
+        <button id="btn-ed-delete" class="px-4 py-2.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 font-bold text-sm">Delete</button>
+        <div class="flex gap-2">
+          <button id="btn-ed-cancel" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 font-bold text-sm">Cancel</button>
+          <button id="btn-ed-save" class="px-5 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-bold text-sm shadow">Save Block</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PWA INSTALL GUIDE MODAL ==================== -->
+  <div id="pwa-install-modal" class="hidden fixed inset-0 z-50 bg-slate-900/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl space-y-4">
+      <div class="flex items-center gap-3">
+        <img src="assets/icon-192.png" alt="Gabriel Alarm Icon" class="w-14 h-14 rounded-2xl shadow border border-slate-200" />
+        <div>
+          <h3 class="font-kid font-bold text-xl text-slate-900">Install Gabriel Daily Reminder</h3>
+          <p class="text-xs font-bold text-emerald-700">Layar penuh • Tanpa browser bar • Siap Offline</p>
+        </div>
+      </div>
+
+      <div id="pwa-guide-body" class="space-y-3 text-sm text-slate-700 font-semibold"></div>
+
+      <div class="flex justify-end gap-2 pt-2">
+        <button id="btn-pwa-modal-close" class="w-full py-3 rounded-2xl bg-sky-600 hover:bg-sky-700 text-white font-extrabold text-sm shadow">
+          Mengerti / Tutup
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== TOAST NOTIFICATION ==================== -->
+  <div id="pwa-toast" class="hidden fixed bottom-5 left-1/2 -translate-x-1/2 z-50 bg-slate-900 text-white px-5 py-3 rounded-2xl shadow-2xl border border-emerald-400/50 flex items-center gap-2.5 text-sm font-extrabold">
+    <span id="pwa-toast-icon">📲</span>
+    <span id="pwa-toast-text">Gabriel Daily Reminder berhasil di-install!</span>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+  <script type="module" src="./tablet-beta.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+*.tmp.mp3
+data/tts_cache/
+node_modules/

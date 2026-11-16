@@ -1,0 +1,2599 @@
+{
+  "version": 1,
+  "pin": "1996",
+  "config": {
+    "childName": "Gabriel",
+    "classLabel": "Kelas 1B - 1 Bonsai (Bu Nining) • Online & Home Mode (Offline Postponed -> Dec 2026)",
+    "offlinePostponedUntil": "2026-12-01",
+    "daringRutinSlot": "morning",
+    "amber4Days": [
+      "tue"
+    ],
+    "waydivers5Day": "off",
+    "agamaChoice": "none",
+    "voiceChimeEnabled": true,
+    "autoShowEnglishPhrases": true
+  },
+  "weeklySchedule": {
+    "mon": [
+      {
+        "id": "mon-01",
+        "start": "08:00",
+        "end": "08:35",
+        "titleId": "BANGUN PAGI & SARAPAN SEHAT",
+        "titleEn": "GOOD MORNING & YUMMY BREAKFAST!",
+        "subtitleId": "Cuci muka, sikat gigi sambil duduk nyaman, lalu sarapan pagi",
+        "subtitleEn": "Wash your face, brush your teeth sitting comfy, and enjoy warm breakfast!",
+        "category": "MEAL",
+        "illustration": "morning-breakfast.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Put your feet on your soft footrest at the table!",
+        "kidPhrases": [
+          "Good morning, Mama!",
+          "Can I have milk and toast, please?",
+          "My leg feels good today!"
+        ],
+        "parentCue": "Play 'Breakfast Cafe': take Gabriel's breakfast order in English!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "mon-02",
+        "start": "08:35",
+        "end": "09:00",
+        "titleId": "PEREGANGAN PAGI DUDUK CERIA",
+        "titleEn": "SEATED HERO STRETCH!",
+        "subtitleId": "Putar bahu, rentangkan tangan ke atas & tarik napas dalam di sofa",
+        "subtitleEn": "Stretch your arms high, roll your shoulders, and take 5 big hero breaths!",
+        "category": "MOVE",
+        "illustration": "gentle-stretch-art.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Stay seated on your cozy mat - zero jumping!",
+        "kidPhrases": [
+          "One, two, three, reach the sky!",
+          "Watch my strong arms!",
+          "Big breath in, big breath out!"
+        ],
+        "parentCue": "Play 2 minutes of Seated Simon Says in English.",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "mon-03",
+        "start": "09:00",
+        "end": "10:00",
+        "titleId": "BELAJAR MANDIRI SMM (TEMA & ENGLISH)",
+        "titleEn": "SMM EXPLORER FOCUS TIME",
+        "subtitleId": "Cek materi Tema 2 & latihan ringan bersama Mama/Papa",
+        "subtitleEn": "Explore today's SMM story & fun worksheet with feet supported on your cushion!",
+        "category": "SMM",
+        "illustration": "book-reading.jpg",
+        "englishMode": false,
+        "legNoteId": "Taruh bantal/pijakan empuk di bawah kaki selama duduk belajar",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Let's check today's story!",
+          "I finished this part!",
+          "Can I take a water break?"
+        ],
+        "parentCue": "Keep chunks 15-20 mins; use Indonesian for SMM Tema, English for SMM English slides.",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "mon-04",
+        "start": "10:00",
+        "end": "11:15",
+        "titleId": "SNACK & MAIN LEGO CERITA",
+        "titleEn": "SNACK & LEGO STORY PLAY!",
+        "subtitleId": "Makan buah/snack lalu bebas merakit Lego, balok, atau kereta",
+        "subtitleEn": "Eat your snack and build awesome houses, cars, or towers on the cushion!",
+        "category": "TOY",
+        "illustration": "toy-play.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit against your soft beanbag while building!",
+        "kidPhrases": [
+          "I am building a big house!",
+          "Look how tall my tower is!",
+          "Do you want to play with me?"
+        ],
+        "parentCue": "Ask 2-choice English questions: 'Is that a garage or a castle?'",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "mon-05",
+        "start": "11:15",
+        "end": "12:00",
+        "titleId": "BACA BUKU CERITA BERSAMA",
+        "titleEn": "STORYBOOK ADVENTURE TIME!",
+        "subtitleId": "Baca buku bergambar seru di sofa sambil menunjuk gambar",
+        "subtitleEn": "Snuggle on the sofa with legs on a fluffy pillow and read an English storybook!",
+        "category": "BOOK",
+        "illustration": "book-reading.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Prop your legs up on the cozy sofa pillow!",
+        "kidPhrases": [
+          "Turn the page, please!",
+          "I think he will find treasure!",
+          "This picture is so funny!"
+        ],
+        "parentCue": "Pause before turning pages: 'What do you see here, Gabriel?'",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "mon-06",
+        "start": "12:00",
+        "end": "12:50",
+        "titleId": "MAKAN SIANG & ANAK HEBAT",
+        "titleEn": "LUNCH & TABLE HELPER TIME!",
+        "subtitleId": "Makan siang bergizi & lap alas makan sendiri sambil duduk",
+        "subtitleEn": "Enjoy your warm lunch and wipe your placemat clean while sitting!",
+        "category": "MEAL",
+        "illustration": "morning-breakfast.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "This tastes so yummy!",
+          "More water, please!",
+          "I'm full, thank you for lunch!"
+        ],
+        "parentCue": "Model polite table English naturally; recast any Indonesian requests warmly.",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "mon-07",
+        "start": "12:50",
+        "end": "13:50",
+        "titleId": "ISTIRAHAT SIANG & KAKI DI BANTAL",
+        "titleEn": "CLOUD PILLOW REST TIME",
+        "subtitleId": "Rebahan santai di kasur, kaki disangga bantal empuk sambil dengar cerita audio",
+        "subtitleEn": "Rest your body and prop your legs on your cloud pillow while listening to a calm story!",
+        "category": "REST",
+        "illustration": "rest-recharge.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Keep your sore leg elevated on a soft pillow to heal super strong!",
+        "kidPhrases": [
+          "My pillow is so soft!",
+          "Play a calm story, please.",
+          "My leg is resting nicely."
+        ],
+        "parentCue": "Quiet lights + gentle English audiobook at home (Offline Tebet postponed until Dec).",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "mon-08",
+        "start": "13:50",
+        "end": "14:35",
+        "titleId": "CAMILAN SORE & BUKU CERITA DI RUMAH",
+        "titleEn": "COZY SNACK & STORYBOOK AT HOME",
+        "subtitleId": "Bangun santai di rumah, minum air, makan buah & baca buku bergambar (kelas offline ditunda ke Des)",
+        "subtitleEn": "Wake up gently at home, enjoy a healthy snack, and read a fun English storybook on the sofa!",
+        "category": "BOOK",
+        "illustration": "book-reading.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Stay cozy on the sofa cushions - zero car trip needed this month!",
+        "kidPhrases": [
+          "Can I have an apple slice, please?",
+          "Let's read this page together!",
+          "Look at this funny picture!"
+        ],
+        "parentCue": "Offline Tebet postponed until Dec: keep afternoon calm at home with English picture books.",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "mon-09",
+        "start": "14:35",
+        "end": "16:00",
+        "titleId": "LIVING ENGLISH LMS & MAIN KARTU DI RUMAH",
+        "titleEn": "LIVING ENGLISH HOME FUN & GAMES!",
+        "subtitleId": "Latihan seru Living English mandiri (LMS) & main kartu bahasa Inggris santai di rumah",
+        "subtitleEn": "Play fun Living English LMS activities, flashcards, and seated word games right at home!",
+        "category": "ENGLISH",
+        "illustration": "living-english-hub.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit comfortably on your home sofa or play mat!",
+        "kidPhrases": [
+          "Watch me match this card!",
+          "Can we play one more round, please?",
+          "I know this English word!"
+        ],
+        "parentCue": "Replaces postponed Tebet offline class (resuming Dec): 25-30 min light LMS + relaxed English play.",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "mon-10",
+        "start": "16:00",
+        "end": "17:30",
+        "titleId": "MANDI AIR HANGAT & SANTAI SORE",
+        "titleEn": "WARM BATH & COZY FAMILY TIME",
+        "subtitleId": "Mandi air hangat yang nyaman untuk kaki & main santai bersama keluarga di rumah",
+        "subtitleEn": "Enjoy a soothing warm bath at home and relax with family!",
+        "category": "REST",
+        "illustration": "rest-recharge.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Use the non-slip mat in the warm bath!",
+        "kidPhrases": [
+          "The warm water feels nice!",
+          "Let's play together on the rug!",
+          "Can I wear my blue shirt?"
+        ],
+        "parentCue": "Ask warmly: 'Which English game or story was your favorite this afternoon?'",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "mon-11",
+        "start": "17:30",
+        "end": "18:15",
+        "titleId": "MAKAN MALAM KELUARGA",
+        "titleEn": "FAMILY DINNER HIGHLIGHT!",
+        "subtitleId": "Makan malam bersama & cerita 1 hal paling seru hari ini",
+        "subtitleEn": "Eat dinner together and share your #1 favorite moment of today in English!",
+        "category": "MEAL",
+        "illustration": "morning-breakfast.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "My favorite part today was...",
+          "Pass the rice, please!",
+          "Thank you for dinner, Mama!"
+        ],
+        "parentCue": "Share your own 1-sentence highlight in simple English first!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "mon-12",
+        "start": "18:15",
+        "end": "18:45",
+        "titleId": "MAIN PUZZLE / BOARD GAME",
+        "titleEn": "COZY PUZZLE & GAME DOCK",
+        "subtitleId": "Main kartu, domino, atau puzzle duduk santai bareng Mama/Papa",
+        "subtitleEn": "Play cards, dominoes, or puzzles together on the cozy rug!",
+        "category": "TOY",
+        "illustration": "toy-play.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "It's my turn!",
+          "Now it's your turn!",
+          "Yay, we did it together!"
+        ],
+        "parentCue": "Great natural turn-taking English phrases.",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "mon-13",
+        "start": "18:45",
+        "end": "19:15",
+        "titleId": "CERITA PENGANTAR TIDUR",
+        "titleEn": "MOONLIGHT BEDTIME STORY",
+        "subtitleId": "Lampu redup hangat, baca 1-2 buku cerita sebelum tidur",
+        "subtitleEn": "Dim the warm lamp and listen to a calm bedtime story in bed!",
+        "category": "BOOK",
+        "illustration": "book-reading.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Read one more page, please?",
+          "I like the little bear.",
+          "I feel sleepy and cozy."
+        ],
+        "parentCue": "Use a slow, whisper-soft voice to cue sleep.",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "mon-14",
+        "start": "19:15",
+        "end": "20:00",
+        "titleId": "SIKAT GIGI, PELUK & SIAP BOBO (20:00)",
+        "titleEn": "BRUSH TEETH, HUGS & GOODNIGHT!",
+        "subtitleId": "Sikat gigi, piyama nyaman, doa malam & lampu mati jam 19:35",
+        "subtitleEn": "Brush teeth, comfy pajamas, big hugs, and lights out so you sleep by 8 PM!",
+        "category": "SLEEP",
+        "illustration": "bedtime-sleep.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Goodnight Mama, goodnight Papa!",
+          "Sweet dreams!",
+          "I love you so much!"
+        ],
+        "parentCue": "Lights out by 19:35 so Gabriel is fast asleep at 20:00.",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "mon-15",
+        "start": "20:00",
+        "end": "23:59",
+        "titleId": "WAKTUNYA TIDUR NYENYAK",
+        "titleEn": "SWEET DREAMS, GABRIEL",
+        "subtitleId": "Selamat tidur sampai besok pagi jam 07:30!",
+        "subtitleEn": "Shhh... sleeping peacefully until 7:30 tomorrow morning!",
+        "category": "SLEEP",
+        "illustration": "bedtime-sleep.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Sweet dreams!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      }
+    ],
+    "tue": [
+      {
+        "id": "tue-00",
+        "start": "00:00",
+        "end": "07:30",
+        "titleId": "TIDUR NYENYAK SAMPAI 07:30",
+        "titleEn": "SLEEPING PEACEFULLY",
+        "subtitleId": "Masih waktunya bobo sampai jam 07:30 pagi",
+        "subtitleEn": "Still sleeping cozily until 7:30 AM!",
+        "category": "SLEEP",
+        "illustration": "bedtime-sleep.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Sweet dreams!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "tue-01",
+        "start": "07:30",
+        "end": "08:00",
+        "titleId": "BANGUN & SARAPAN SEBELUM ZOOM!",
+        "titleEn": "WAKE UP & BREAKFAST FOR ZOOM!",
+        "subtitleId": "Cuci muka, pakai baju rapi & sarapan hangat sebelum Zoom Bu Nining jam 08:00",
+        "subtitleEn": "Good morning! Wash up, put on a comfy shirt, and eat breakfast before 8:00 Zoom!",
+        "category": "MEAL",
+        "illustration": "morning-breakfast.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Check that your desk cushion footrest is ready for 8:00 Zoom!",
+        "kidPhrases": [
+          "Good morning!",
+          "I'm ready for Bu Nining's class!",
+          "Headphones and pillow check!"
+        ],
+        "parentCue": "Prep laptop + Zoom ID 934 2915 1232 (SD1SMM) at 07:55.",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "tue-02",
+        "start": "08:00",
+        "end": "09:10",
+        "titleId": "ZOOM LIVE: DARING RUTIN 1B (BU NINING)",
+        "titleEn": "ZOOM LIVE: DARING RUTIN 1B (BU NINING)",
+        "subtitleId": "Panggil Mama/Papa untuk buka Zoom Kelas 1 Bonsai Bu Nining! Kaki di bantal ya",
+        "subtitleEn": "Call Mama/Papa to open Bu Nining's 1B Bonsai Zoom! Keep feet comfy on your cushion.",
+        "category": "ZOOM",
+        "illustration": "zoom-class.jpg",
+        "englishMode": false,
+        "legNoteId": "PENTING: Sangga kaki di bantal/pijakan empuk di bawah meja selama Zoom!",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Selamat pagi Bu Nining!",
+          "Terima kasih Bu Guru!"
+        ],
+        "parentCue": "Zoom ID: 934 2915 1232 | Passcode: SD1SMM (Kelas 1B Bahasa Indonesia).",
+        "zoomKey": "daringRutin1B",
+        "customZoomUrl": ""
+      },
+      {
+        "id": "tue-03",
+        "start": "09:10",
+        "end": "09:40",
+        "titleId": "SNACK & PEREGANGAN DUDUK",
+        "titleEn": "SNACK & SEATED STRETCH BREAK!",
+        "subtitleId": "Istirahat mata dari layar, makan snack & gerakkan tangan sambil duduk",
+        "subtitleEn": "Rest your eyes from the screen, enjoy a snack, and stretch your arms!",
+        "category": "MOVE",
+        "illustration": "gentle-stretch-art.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Zoom was fun!",
+          "Can I have fruit, please?",
+          "Let's stretch our arms!"
+        ],
+        "parentCue": "Switch smoothly back to Full English right after Indonesian Zoom ends!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "tue-04",
+        "start": "09:40",
+        "end": "10:30",
+        "titleId": "KARYA / LK RINGAN SMM",
+        "titleEn": "CREATIVE WORKSHEET & CRAFT",
+        "subtitleId": "Lanjutkan gambar/gunting-tempel LK dari kelas tadi sambil duduk nyaman",
+        "subtitleEn": "Finish your fun craft or drawing at the table with comfy foot support!",
+        "category": "SMM",
+        "illustration": "gentle-stretch-art.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Pass me the crayons, please!",
+          "Look at my drawing!",
+          "Where does the glue go?"
+        ],
+        "parentCue": "Talk through colors, scissors, and shapes in English.",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "tue-05",
+        "start": "10:30",
+        "end": "11:30",
+        "titleId": "MAIN BEBAS: LEGO & MOBILAN",
+        "titleEn": "LEGO & TOY STORY COVE!",
+        "subtitleId": "Waktu bebas merakit mainan favorit & bercerita dalam Bahasa Inggris",
+        "subtitleEn": "Free play time! Build anything you imagine and tell a mini English story!",
+        "category": "TOY",
+        "illustration": "toy-play.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Watch my car go!",
+          "Let's build a bridge together!",
+          "This robot is super strong!"
+        ],
+        "parentCue": "Follow Gabriel's lead; narrate gently in simple English.",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "tue-06",
+        "start": "11:30",
+        "end": "12:15",
+        "titleId": "BACA BUKU CERITA INGGRIS",
+        "titleEn": "ENGLISH STORY HARBOR!",
+        "subtitleId": "Baca buku bergambar bersama di sofa nyaman",
+        "subtitleEn": "Pick an English picture book and read together on the sofa!",
+        "category": "BOOK",
+        "illustration": "book-reading.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Let's read this one!",
+          "What does that word mean?",
+          "That part made me laugh!"
+        ],
+        "parentCue": "Pick 1 fun word from the story to use at lunch!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "tue-07",
+        "start": "12:15",
+        "end": "13:00",
+        "titleId": "MAKAN SIANG SEHAT",
+        "titleEn": "YUMMY LUNCH TIME!",
+        "subtitleId": "Makan siang & bantu rapikan sendok sambil duduk",
+        "subtitleEn": "Eat lunch together and chat in English!",
+        "category": "MEAL",
+        "illustration": "morning-breakfast.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Is lunch ready?",
+          "It smells delicious!",
+          "Thank you for the food!"
+        ],
+        "parentCue": "Keep mealtime conversation relaxed and 100% English.",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "tue-08",
+        "start": "13:00",
+        "end": "13:55",
+        "titleId": "ISTIRAHAT SIANG & KAKI DI BANTAL",
+        "titleEn": "CLOUD PILLOW RECHARGE",
+        "subtitleId": "Tidur siang / rebahan tenang dengan kaki di atas bantal empuk",
+        "subtitleEn": "Quiet rest on bed with your legs elevated on a fluffy pillow!",
+        "category": "REST",
+        "illustration": "rest-recharge.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Elevate your sore leg on the soft pillow!",
+        "kidPhrases": [
+          "Time to rest my legs.",
+          "This blanket is cozy."
+        ],
+        "parentCue": "45-55 min rest keeps Gabriel happy for 16:00 Amber 4 Zoom.",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "tue-09",
+        "start": "13:55",
+        "end": "14:45",
+        "titleId": "KREASI TERAS: MENGGAMBAR / PLAYDOUGH",
+        "titleEn": "SUNNY TERRACE ART & CLAY!",
+        "subtitleId": "Duduk di kursi teras menghirup udara segar sambil main playdough / melukis",
+        "subtitleEn": "Sit on the sunny terrace chair and sculpt clay, paint, or fold origami!",
+        "category": "MOVE",
+        "illustration": "gentle-stretch-art.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Fresh air & sunshine while seated - zero running or climbing!",
+        "kidPhrases": [
+          "I made a clay dinosaur!",
+          "Look at the butterflies!",
+          "Let's mix blue and yellow!"
+        ],
+        "parentCue": "Outdoor daylight without leg strain.",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "tue-10",
+        "start": "14:45",
+        "end": "15:50",
+        "titleId": "MAIN BEBAS & BACA BUKU MANDIRI",
+        "titleEn": "FREE PLAY & PICTURE BOOK WALK",
+        "subtitleId": "Main mainan pilihan sendiri & lihat-lihat buku favorit sebelum Zoom sore",
+        "subtitleEn": "Calm free play and cozy book corner before your 4:00 PM Amber 4 class!",
+        "category": "TOY",
+        "illustration": "toy-play.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "I want to play with my blocks!",
+          "Five more minutes, please?"
+        ],
+        "parentCue": "Give a calm 10-minute heads-up at 15:50 before Amber 4 Zoom.",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "tue-11",
+        "start": "15:50",
+        "end": "16:00",
+        "titleId": "SIAP-SIAP ZOOM AMBER 4!",
+        "titleEn": "HEADPHONES READY FOR AMBER 4!",
+        "subtitleId": "Minum air, ke toilet, pasang headphone & taruh kaki di bantal",
+        "subtitleEn": "Sip water, bathroom check, headphones on, and feet on your soft cushion!",
+        "category": "ZOOM",
+        "illustration": "zoom-class.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "My headphones are ready!",
+          "Please open Amber 4 Zoom, Mama!"
+        ],
+        "parentCue": "Open Amber 4 Zoom link (ID 943 3313 7819) at 15:57.",
+        "zoomKey": "amber4Online",
+        "customZoomUrl": ""
+      },
+      {
+        "id": "tue-12",
+        "start": "16:00",
+        "end": "17:15",
+        "titleId": "ZOOM LIVE: KELAS AMBER 4 (ENGLISH)",
+        "titleEn": "ZOOM LIVE: AMBER 4 ENGLISH CLASS!",
+        "subtitleId": "Waktunya kelas online Amber 4! Berani ngomong Bahasa Inggris ya!",
+        "subtitleEn": "Smile, wave to your teacher, and speak loud and proud in Amber 4 Zoom!",
+        "category": "ZOOM",
+        "illustration": "zoom-class.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Keep your feet resting comfortably on your desk cushion!",
+        "kidPhrases": [
+          "Hello Teacher!",
+          "Can I answer, please?",
+          "Thank you, bye-bye!"
+        ],
+        "parentCue": "Zoom ID: 943 3313 7819 (16:00-17:15 WIB).",
+        "zoomKey": "amber4Online",
+        "customZoomUrl": ""
+      },
+      {
+        "id": "tue-13",
+        "start": "17:15",
+        "end": "18:15",
+        "titleId": "MANDI AIR HANGAT & MAKAN MALAM",
+        "titleEn": "WARM BATH & FAMILY DINNER",
+        "subtitleId": "Segarkan badan dengan air hangat lalu makan malam bersama keluarga",
+        "subtitleEn": "Warm soothing bath after Zoom, then yummy family dinner together!",
+        "category": "MEAL",
+        "illustration": "morning-breakfast.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "I spoke so much English in class!",
+          "What's for dinner tonight?"
+        ],
+        "parentCue": "Celebrate every English sentence he used in Amber 4!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "tue-14",
+        "start": "18:15",
+        "end": "18:45",
+        "titleId": "MAIN BOARD GAME / KARTU",
+        "titleEn": "BOARD GAME & PUZZLE TIME",
+        "subtitleId": "Main santai bersama Mama/Papa di ruang keluarga",
+        "subtitleEn": "Calm family card game or puzzle together!",
+        "category": "TOY",
+        "illustration": "toy-play.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Your turn!",
+          "My turn!",
+          "Good game!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "tue-15",
+        "start": "18:45",
+        "end": "19:15",
+        "titleId": "CERITA MALAM SEBELUM TIDUR",
+        "titleEn": "MOONLIGHT BEDTIME STORY",
+        "subtitleId": "Baca cerita tenang dengan lampu kamar hangat",
+        "subtitleEn": "Cozy bedtime story under the warm night lamp!",
+        "category": "BOOK",
+        "illustration": "book-reading.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Let's cuddle and read!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "tue-16",
+        "start": "19:15",
+        "end": "20:00",
+        "titleId": "SIKAT GIGI & BOBO JAM 20:00",
+        "titleEn": "STARLIGHT SLEEP ROUTINE",
+        "subtitleId": "Sikat gigi, piyama, peluk malam & tidur nyenyak jam 20:00",
+        "subtitleEn": "Teeth brushed, pajamas on, hugs, and fast asleep by 8:00 PM!",
+        "category": "SLEEP",
+        "illustration": "bedtime-sleep.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Goodnight, sweet dreams!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "tue-17",
+        "start": "20:00",
+        "end": "23:59",
+        "titleId": "TIDUR NYENYAK (ESOK ZOOM 07:00!)",
+        "titleEn": "SLEEP TIGHT FOR WEDNESDAY!",
+        "subtitleId": "Bobo nyenyak ya, besok pagi jam 07:00 ada Zoom English Ms. Aan!",
+        "subtitleEn": "Sleeping soundly - tomorrow morning is Ms. Aan's English Zoom!",
+        "category": "SLEEP",
+        "illustration": "bedtime-sleep.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Goodnight!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      }
+    ],
+    "wed": [
+      {
+        "id": "wed-00",
+        "start": "00:00",
+        "end": "06:35",
+        "titleId": "TIDUR NYENYAK SAMPAI 06:35",
+        "titleEn": "SLEEPING PEACEFULLY",
+        "subtitleId": "Bobo nyenyak sampai jam 06:35 pagi",
+        "subtitleEn": "Sleeping cozily until 6:35 AM!",
+        "category": "SLEEP",
+        "illustration": "bedtime-sleep.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "I am ready!",
+          "Look what I did, Mama!",
+          "Can you help me, please?"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "wed-01",
+        "start": "06:35",
+        "end": "07:00",
+        "titleId": "BANGUN PAGI & SUSU HANGAT (SIAP ZOOM!)",
+        "titleEn": "RISE & SHINE FOR MS. AAN'S ZOOM!",
+        "subtitleId": "Cuci muka segar, minum susu hangat/roti kecil & siap di kursi nyaman untuk Zoom 07:00",
+        "subtitleEn": "Gentle wake-up, warm milk & banana, and headphones ready for 7:00 AM English Zoom!",
+        "category": "MEAL",
+        "illustration": "morning-breakfast.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit in your comfy chair with your foot pillow ready!",
+        "kidPhrases": [
+          "Good morning!",
+          "Warm milk, please!",
+          "I'm ready for Ms. Aan!"
+        ],
+        "parentCue": "Open SMM English Zoom (ID 941 2939 3790, Passcode: year1) at 06:56.",
+        "zoomKey": "english1B",
+        "customZoomUrl": ""
+      },
+      {
+        "id": "wed-02",
+        "start": "07:00",
+        "end": "08:00",
+        "titleId": "ZOOM LIVE: SMM ENGLISH 1B (MS. AAN)",
+        "titleEn": "ZOOM LIVE: SMM ENGLISH (MS. AAN)!",
+        "subtitleId": "Kelas Live Bahasa Inggris Kelas 1B bareng Ms. Aan! Kaki disangga bantal ya",
+        "subtitleEn": "Live SMM English Zoom with Ms. Aan! Wave hello and enjoy speaking English!",
+        "category": "ZOOM",
+        "illustration": "zoom-class.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Keep your legs resting comfortably on your ottoman cushion!",
+        "kidPhrases": [
+          "Good morning, Ms. Aan!",
+          "Here is my answer!",
+          "Thank you, Ms. Aan!"
+        ],
+        "parentCue": "Zoom ID: 941 2939 3790 | Passcode: year1.",
+        "zoomKey": "english1B",
+        "customZoomUrl": ""
+      },
+      {
+        "id": "wed-03",
+        "start": "08:00",
+        "end": "09:20",
+        "titleId": "SARAPAN LENGKAP & ISTIRAHAT MAIN",
+        "titleEn": "FULL BREAKFAST & COZY TOY BREAK!",
+        "subtitleId": "Selesai Zoom pagi! Sekarang makan sarapan lengkap & main santai sebelum PJOK",
+        "subtitleEn": "Great job in 7 AM Zoom! Enjoy a big warm breakfast and calm toy play!",
+        "category": "MEAL",
+        "illustration": "morning-breakfast.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "I did great in English Zoom!",
+          "I'm hungry for eggs and toast!",
+          "Let's play calmly before PJOK."
+        ],
+        "parentCue": "Keep full English momentum rolling straight from Ms. Aan's class!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "wed-04",
+        "start": "09:20",
+        "end": "09:30",
+        "titleId": "SIAP KURSI NYAMAN UNTUK ZOOM PJOK",
+        "titleEn": "CHAIR & SOFT BALL READY FOR PJOK!",
+        "subtitleId": "Siapkan kursi empuk, botol air & balon/bola lembut untuk PJOK duduk jam 09:30",
+        "subtitleEn": "Grab your water bottle and soft ball - remember, seated gentle moves only today!",
+        "category": "MOVE",
+        "illustration": "gentle-stretch-art.jpg",
+        "englishMode": false,
+        "legNoteId": "PENTING SAKIT KAKI: Ikut PJOK sambil duduk (gerak tangan/bahagia, TANPA lompat/lari)!",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Kursi dan air minum sudah siap!"
+        ],
+        "parentCue": "Open PJOK Zoom ID 919 3577 1786; message Bu Eva in chat that Gabriel joins seated.",
+        "zoomKey": "pjok1B",
+        "customZoomUrl": ""
+      },
+      {
+        "id": "wed-05",
+        "start": "09:30",
+        "end": "10:30",
+        "titleId": "ZOOM LIVE: PJOK KELAS 1 (BU EVA - DUDUK AMAN)",
+        "titleEn": "ZOOM LIVE: GENTLE SEATED PJOK (BU EVA)",
+        "subtitleId": "Ikuti gerakan tangan, tepuk irama & tangkap bola sambil DUDUK NYAMAN (jangan lompat/lari ya!)",
+        "subtitleEn": "Follow Bu Eva's arm stretches and rhythm claps while SITTING SAFELY (no jumping)!",
+        "category": "ZOOM",
+        "illustration": "gentle-stretch-art.jpg",
+        "englishMode": false,
+        "legNoteId": "JAGA KAKI: Semua gerakan dilakukan sambil duduk di kursi/matras empuk!",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Halo Bu Eva!",
+          "Aku ikut gerakan tangan sambil duduk ya!"
+        ],
+        "parentCue": "Supervise closely so Gabriel stays seated even if classmates jump.",
+        "zoomKey": "pjok1B",
+        "customZoomUrl": ""
+      },
+      {
+        "id": "wed-06",
+        "start": "10:30",
+        "end": "11:20",
+        "titleId": "SNACK BUAH & MAIN LEGO SANTAI",
+        "titleEn": "FRUIT SNACK & CALM LEGO TIME!",
+        "subtitleId": "Minum air, makan buah segar & main balok di karpet empuk",
+        "subtitleEn": "Drink water, eat fresh fruit, and enjoy calm block building!",
+        "category": "TOY",
+        "illustration": "toy-play.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Water feels refreshing!",
+          "Look what I'm making!",
+          "Come see my train track!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "wed-07",
+        "start": "11:20",
+        "end": "12:00",
+        "titleId": "BACA BUKU CERITA DI SOFA",
+        "titleEn": "SOFA STORYBOOK TIME!",
+        "subtitleId": "Baca cerita seru sambil meluruskan kaki di sofa empuk",
+        "subtitleEn": "Stretch out on the sofa with a fluffy leg pillow and enjoy a picture book!",
+        "category": "BOOK",
+        "illustration": "book-reading.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Read this page, please!",
+          "Look at the big castle!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "wed-08",
+        "start": "12:00",
+        "end": "12:45",
+        "titleId": "MAKAN SIANG BERGIZI",
+        "titleEn": "EARLY YUMMY LUNCH!",
+        "subtitleId": "Makan siang bergizi supaya bisa tidur siang pulas dan nyaman di rumah",
+        "subtitleEn": "Eat a yummy lunch so you get a nice cozy afternoon nap at home!",
+        "category": "MEAL",
+        "illustration": "morning-breakfast.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Yum, thank you Mama!",
+          "May I have soup, please?"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "wed-09",
+        "start": "12:45",
+        "end": "13:50",
+        "titleId": "TIDUR SIANG PULAS & KAKI DI BANTAL",
+        "titleEn": "DEEP POWER NAP & CLOUD PILLOW",
+        "subtitleId": "Tidur siang 1 jam penuh setelah bangun jam 06:35 pagi tadi! Kaki disangga bantal ya",
+        "subtitleEn": "Cozy 65-minute nap with legs on your cloud pillow to recharge after early Zoom!",
+        "category": "REST",
+        "illustration": "rest-recharge.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Extra important Wednesday nap so your legs & brain feel super fresh!",
+        "kidPhrases": [
+          "Time for my cozy nap!",
+          "My legs feel comfy on the pillow."
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "wed-10",
+        "start": "13:50",
+        "end": "14:35",
+        "titleId": "BANGUN SEGAR, CAMILAN & CERITA AUDIO",
+        "titleEn": "SNACK & COZY STORY TIME AT HOME!",
+        "subtitleId": "Bangun segar di rumah, minum air & dengar lagu/cerita Inggris (kelas offline ditunda ke Des)",
+        "subtitleEn": "Wake up gently at home, drink water, and enjoy an English song or picture book!",
+        "category": "BOOK",
+        "illustration": "book-reading.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "I slept so well!",
+          "Can we listen to an English song, please?"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "wed-11",
+        "start": "14:35",
+        "end": "16:00",
+        "titleId": "LIVING ENGLISH LMS & KREASI DI RUMAH",
+        "titleEn": "LIVING ENGLISH HOME PLAY & ART!",
+        "subtitleId": "Sesi Living English mandiri (LMS) & gambar/main kreatif di rumah (offline mulai Des)",
+        "subtitleEn": "Have an awesome afternoon doing Living English LMS & drawing stories in English at home!",
+        "category": "ENGLISH",
+        "illustration": "living-english-hub.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Seated table or cushion play at home - super comfy for your legs!",
+        "kidPhrases": [
+          "Look what I drew!",
+          "How do you say this in English?",
+          "That was super fun!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "wed-12",
+        "start": "16:00",
+        "end": "17:30",
+        "titleId": "MANDI AIR HANGAT & RELAX DI RUMAH",
+        "titleEn": "WARM BATH & COZY HOME RELAX",
+        "subtitleId": "Mandi air hangat & main tenang di sofa sambil istirahatkan kaki",
+        "subtitleEn": "Soak in a warm shower/bath and relax your legs on the sofa!",
+        "category": "REST",
+        "illustration": "rest-recharge.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "The warm bath feels great!",
+          "Today was a fun cozy day!",
+          "Let's relax on the sofa."
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "wed-13",
+        "start": "17:30",
+        "end": "18:15",
+        "titleId": "MAKAN MALAM KELUARGA",
+        "titleEn": "FAMILY DINNER HIGHLIGHT!",
+        "subtitleId": "Makan malam hangat & cerita 1 hal paling seru hari ini",
+        "subtitleEn": "Enjoy family dinner and tell Mama & Papa 1 fun thing from today in English!",
+        "category": "MEAL",
+        "illustration": "morning-breakfast.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "My favorite part today was..."
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "wed-14",
+        "start": "18:15",
+        "end": "18:45",
+        "titleId": "PUZZLE / PERMAINAN TENANG",
+        "titleEn": "CALM PUZZLE & FAMILY TIME",
+        "subtitleId": "Main puzzle atau kartu ringan sebelum cerita tidur",
+        "subtitleEn": "Gentle seated puzzle or card game together!",
+        "category": "TOY",
+        "illustration": "toy-play.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Where does this piece fit?"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "wed-15",
+        "start": "18:45",
+        "end": "19:15",
+        "titleId": "CERITA PENGANTAR TIDUR",
+        "titleEn": "MOONLIGHT BEDTIME STORY",
+        "subtitleId": "Baca cerita lembut di tempat tidur dengan lampu hangat",
+        "subtitleEn": "Snuggle up under the blanket for tonight's bedtime story!",
+        "category": "BOOK",
+        "illustration": "book-reading.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "I love story time!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "wed-16",
+        "start": "19:15",
+        "end": "20:00",
+        "titleId": "SIKAT GIGI & BOBO JAM 20:00",
+        "titleEn": "STARLIGHT SLEEP ROUTINE",
+        "subtitleId": "Sikat gigi, piyama nyaman & lampu padam jam 19:35 -> tidur 20:00",
+        "subtitleEn": "Brush teeth, hugs, and drift off to sleep by 8:00 PM!",
+        "category": "SLEEP",
+        "illustration": "bedtime-sleep.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Goodnight Mama & Papa!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "wed-17",
+        "start": "20:00",
+        "end": "23:59",
+        "titleId": "TIDUR NYENYAK SAMPAI 07:30",
+        "titleEn": "SWEET DREAMS, GABRIEL",
+        "subtitleId": "Selamat istirahat sampai besok jam 07:30 pagi!",
+        "subtitleEn": "Sleeping peacefully until 7:30 AM tomorrow!",
+        "category": "SLEEP",
+        "illustration": "bedtime-sleep.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "I am ready!",
+          "Look what I did, Mama!",
+          "Can you help me, please?"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      }
+    ],
+    "thu": [
+      {
+        "id": "thu-00",
+        "start": "00:00",
+        "end": "07:30",
+        "titleId": "TIDUR NYENYAK SAMPAI 07:30",
+        "titleEn": "SLEEPING PEACEFULLY",
+        "subtitleId": "Masih waktunya bobo sampai jam 07:30 pagi",
+        "subtitleEn": "Sleeping peacefully until 7:30 AM!",
+        "category": "SLEEP",
+        "illustration": "bedtime-sleep.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "I am ready!",
+          "Look what I did, Mama!",
+          "Can you help me, please?"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "thu-01",
+        "start": "07:30",
+        "end": "08:00",
+        "titleId": "BANGUN & SARAPAN SEBELUM ZOOM!",
+        "titleEn": "WAKE UP & BREAKFAST FOR ZOOM!",
+        "subtitleId": "Cuci muka, ganti baju nyaman & sarapan hangat sebelum Zoom Bu Nining jam 08:00",
+        "subtitleEn": "Good morning! Eat warm breakfast and get your cushion ready for 8:00 Zoom!",
+        "category": "MEAL",
+        "illustration": "morning-breakfast.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Good morning, Mama!",
+          "Can I have eggs today, please?",
+          "Ready for Thursday class!"
+        ],
+        "parentCue": "Prep Zoom ID 934 2915 1232 (Passcode: SD1SMM) at 07:55.",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "thu-02",
+        "start": "08:00",
+        "end": "09:10",
+        "titleId": "ZOOM LIVE: DARING RUTIN 1B (BU NINING)",
+        "titleEn": "ZOOM LIVE: DARING RUTIN 1B (BU NINING)",
+        "subtitleId": "Panggil Mama/Papa buka Zoom Kelas 1 Bonsai Bu Nining! Kaki di pijakan bantal ya",
+        "subtitleEn": "Time for Bu Nining's 1B Bonsai Zoom! Keep your feet comfy on your soft cushion.",
+        "category": "ZOOM",
+        "illustration": "zoom-class.jpg",
+        "englishMode": false,
+        "legNoteId": "Taruh bantal/pijakan empuk di bawah kaki selama Zoom!",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Selamat pagi Bu Nining dan teman-teman!"
+        ],
+        "parentCue": "Zoom ID: 934 2915 1232 | Passcode: SD1SMM.",
+        "zoomKey": "daringRutin1B",
+        "customZoomUrl": ""
+      },
+      {
+        "id": "thu-03",
+        "start": "09:10",
+        "end": "09:40",
+        "titleId": "SNACK & PEREGANGAN DUDUK",
+        "titleEn": "SNACK & GENTLE ARM STRETCH!",
+        "subtitleId": "Makan buah/snack & regangkan bahu sambil duduk",
+        "subtitleEn": "Healthy snack break and gentle seated shoulder rolls!",
+        "category": "MOVE",
+        "illustration": "gentle-stretch-art.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Snack time!",
+          "Let's roll our shoulders!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "thu-04",
+        "start": "09:40",
+        "end": "10:30",
+        "titleId": "GALERI KARYA & UPLOAD LK SMM",
+        "titleEn": "SHOWCASE CRAFT & ENGLISH PRACTICE",
+        "subtitleId": "Foto hasil karya minggu ini bareng Mama & latihan SMM English Step 3",
+        "subtitleEn": "Show off your weekly craft for photo upload and practice English slides!",
+        "category": "SMM",
+        "illustration": "book-reading.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Take a photo of my project, please!",
+          "Let me explain what I made!"
+        ],
+        "parentCue": "Ask Gabriel to describe his SMM craft in 2-3 simple English sentences!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "thu-05",
+        "start": "10:30",
+        "end": "11:30",
+        "titleId": "MAIN PERAN TOKO & LEGO (ENGLISH!)",
+        "titleEn": "MARKET SHOPKEEPER & LEGO PLAY!",
+        "subtitleId": "Main pura-pura jual-beli toko atau merakit balok pakai Bahasa Inggris!",
+        "subtitleEn": "Play pretend market shopkeeper or build Lego cities in Full English!",
+        "category": "TOY",
+        "illustration": "toy-play.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Welcome to my shop!",
+          "How much is this, please?",
+          "Here is two dollars, thank you!"
+        ],
+        "parentCue": "Matches Gabriel's Waydivers Market theme directly!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "thu-06",
+        "start": "11:30",
+        "end": "12:15",
+        "titleId": "BACA BUKU CERITA PILIHAN GABRIEL",
+        "titleEn": "GABRIEL'S CHOICE STORYBOOK!",
+        "subtitleId": "Gabriel pilih sendiri buku cerita di sofa empuk",
+        "subtitleEn": "Pick your favorite picture book and tell Mama the story!",
+        "category": "BOOK",
+        "illustration": "book-reading.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "I pick this book today!",
+          "Look what happens on this page!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "thu-07",
+        "start": "12:15",
+        "end": "13:00",
+        "titleId": "MAKAN SIANG & BANTU DI MEJA",
+        "titleEn": "YUMMY LUNCH & TABLE HELPER!",
+        "subtitleId": "Makan siang bergizi & rapikan serbet sambil duduk",
+        "subtitleEn": "Eat a yummy lunch and fold napkins while seated!",
+        "category": "MEAL",
+        "illustration": "morning-breakfast.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Lunch is yummy!",
+          "Let me fold the napkins!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "thu-08",
+        "start": "13:00",
+        "end": "13:55",
+        "titleId": "ISTIRAHAT SIANG & KAKI DI BANTAL",
+        "titleEn": "CLOUD PILLOW RECHARGE",
+        "subtitleId": "Rebahan tenang di tempat tidur dengan kaki disangga bantal",
+        "subtitleEn": "Rest your legs on your fluffy cloud pillow and listen to gentle music!",
+        "category": "REST",
+        "illustration": "rest-recharge.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Resting my legs makes them strong!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "thu-09",
+        "start": "13:55",
+        "end": "14:45",
+        "titleId": "SENI TERAS SORE: LUKIS / ORIGAMI",
+        "titleEn": "SUNNY TERRACE WATERCOLOR & CRAFT",
+        "subtitleId": "Duduk santai di teras melukis cat air atau melipat kertas origami",
+        "subtitleEn": "Paint with watercolors or fold paper boats on the breezy terrace!",
+        "category": "MOVE",
+        "illustration": "gentle-stretch-art.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Look at the sky!",
+          "I painted a big ocean!",
+          "Pass the paintbrush, please!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "thu-10",
+        "start": "14:45",
+        "end": "16:00",
+        "titleId": "MAIN BEBAS & BUKU BERGAMBAR",
+        "titleEn": "FREE PLAY LAGOON & BOOK WALK",
+        "subtitleId": "Waktu bebas bermain mainan kesukaan di ruang keluarga",
+        "subtitleEn": "100% child-led calm toy play and cozy picture book browsing!",
+        "category": "TOY",
+        "illustration": "toy-play.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Come see what I built!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "thu-11",
+        "start": "16:00",
+        "end": "17:30",
+        "titleId": "MANDI AIR HANGAT & SANTAI SORE",
+        "titleEn": "WARM SOOTHING BATH & FAMILY CHAT",
+        "subtitleId": "Mandi air hangat nyaman & ngobrol sore bersama keluarga (atau Zoom Amber 4 jika jadwal Kamis)",
+        "subtitleEn": "Enjoy a warm soothing bath and cozy afternoon chat with Mama & Papa!",
+        "category": "REST",
+        "illustration": "rest-recharge.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Time for a warm bath!",
+          "Let's sit together on the sofa!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "thu-12",
+        "start": "17:30",
+        "end": "18:15",
+        "titleId": "MAKAN MALAM KELUARGA",
+        "titleEn": "FAMILY DINNER HIGHLIGHT!",
+        "subtitleId": "Makan malam bersama & cerita 1 hal lucu hari ini",
+        "subtitleEn": "Family dinner time - share 1 funny moment from today in English!",
+        "category": "MEAL",
+        "illustration": "morning-breakfast.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Something funny today was..."
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "thu-13",
+        "start": "18:15",
+        "end": "18:45",
+        "titleId": "BOARD GAME / DOMINO KELUARGA",
+        "titleEn": "FAMILY BOARD GAME DOCK",
+        "subtitleId": "Main board game atau domino duduk santai",
+        "subtitleEn": "Play dominoes or cards together in English!",
+        "category": "TOY",
+        "illustration": "toy-play.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Roll the dice!",
+          "I got six!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "thu-14",
+        "start": "18:45",
+        "end": "19:15",
+        "titleId": "CERITA MALAM SEBELUM TIDUR",
+        "titleEn": "MOONLIGHT BEDTIME STORY",
+        "subtitleId": "Lampu kamar redup hangat & baca buku pengantar tidur",
+        "subtitleEn": "Cozy bedtime story under the warm amber nightlight!",
+        "category": "BOOK",
+        "illustration": "book-reading.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "One cozy story before bed!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "thu-15",
+        "start": "19:15",
+        "end": "20:00",
+        "titleId": "SIKAT GIGI & BOBO JAM 20:00",
+        "titleEn": "STARLIGHT SLEEP ROUTINE",
+        "subtitleId": "Sikat gigi, piyama, doa & tidur nyenyak jam 20:00",
+        "subtitleEn": "Teeth, pajamas, hugs, and fast asleep by 8:00 PM!",
+        "category": "SLEEP",
+        "illustration": "bedtime-sleep.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Goodnight, see you tomorrow!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "thu-16",
+        "start": "20:00",
+        "end": "23:59",
+        "titleId": "TIDUR NYENYAK SAMPAI 08:00",
+        "titleEn": "SWEET DREAMS, GABRIEL",
+        "subtitleId": "Selamat tidur sampai jam 08:00 pagi besok!",
+        "subtitleEn": "Sleeping peacefully until 8:00 AM Friday!",
+        "category": "SLEEP",
+        "illustration": "bedtime-sleep.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "I am ready!",
+          "Look what I did, Mama!",
+          "Can you help me, please?"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      }
+    ],
+    "fri": [
+      {
+        "id": "fri-00",
+        "start": "00:00",
+        "end": "08:00",
+        "titleId": "TIDUR NYENYAK SAMPAI 08:00",
+        "titleEn": "SLEEPING PEACEFULLY",
+        "subtitleId": "Bobo nyenyak sampai jam 08:00 pagi",
+        "subtitleEn": "Sleeping peacefully until 8:00 AM!",
+        "category": "SLEEP",
+        "illustration": "bedtime-sleep.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "I am ready!",
+          "Look what I did, Mama!",
+          "Can you help me, please?"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "fri-01",
+        "start": "08:00",
+        "end": "08:35",
+        "titleId": "BANGUN JUMAT CERIA & SARAPAN",
+        "titleEn": "HAPPY FRIDAY BREAKFAST!",
+        "subtitleId": "Bangun jam 08:00 segar, cuci muka & sarapan santai",
+        "subtitleEn": "Happy Friday, Gabriel! Wash up and enjoy a sunny English breakfast!",
+        "category": "MEAL",
+        "illustration": "morning-breakfast.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Happy Friday, Mama!",
+          "I slept twelve hours!",
+          "Can I have pancakes or toast?"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "fri-02",
+        "start": "08:35",
+        "end": "09:05",
+        "titleId": "OLAHRAGA DUDUK & BALON LEMBUT",
+        "titleEn": "SEATED BALLOON TOSS & STRETCH!",
+        "subtitleId": "Tepuk balon lembut / lempar-tangkap bola busa sambil duduk di sofa (aman untuk kaki!)",
+        "subtitleEn": "Tap a soft balloon back and forth while sitting comfy on the sofa!",
+        "category": "MOVE",
+        "illustration": "gentle-stretch-art.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Keep your bottom on the sofa while tapping the balloon - super fun & leg-safe!",
+        "kidPhrases": [
+          "Catch the balloon, Mama!",
+          "One, two, three, empat - oops, four!",
+          "Don't let it touch the floor!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "fri-03",
+        "start": "09:05",
+        "end": "10:00",
+        "titleId": "SMM RISING & JURNAL MINGGUAN",
+        "titleEn": "FRIDAY EXPLORER REVIEW",
+        "subtitleId": "Cek materi RISING / refleksi ringan minggu ke-7 sambil kaki disangga bantal",
+        "subtitleEn": "Light Friday review with cushion under your feet!",
+        "category": "SMM",
+        "illustration": "book-reading.jpg",
+        "englishMode": false,
+        "legNoteId": "Sangga kaki dengan bantal empuk di bawah meja",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Aku suka belajar tentang keluargaku minggu ini!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "fri-04",
+        "start": "10:00",
+        "end": "11:15",
+        "titleId": "SNACK & MAIN BEBAS JUMAT",
+        "titleEn": "FRIDAY FREE PLAY LAGOON!",
+        "subtitleId": "Snack sehat & main bebas merakit dunia imajinasi",
+        "subtitleEn": "Extra-long Friday morning free play with your favorite toys!",
+        "category": "TOY",
+        "illustration": "toy-play.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Look at my giant Lego island!",
+          "Let's make an adventure story!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "fri-05",
+        "start": "11:15",
+        "end": "12:15",
+        "titleId": "SHOW & TELL INGGRIS + BUKU FAVORIT",
+        "titleEn": "FRIDAY ENGLISH SHOW-AND-TELL!",
+        "subtitleId": "Pilih 1 mainan & 1 buku favorit, lalu ceritakan 4 kalimat Bahasa Inggris ke Mama!",
+        "subtitleEn": "Hold your #1 favorite toy of the week and tell Mama 4 sentences about it in English!",
+        "category": "BOOK",
+        "illustration": "book-reading.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "This is my favorite toy.",
+          "It is blue and fast.",
+          "I like it because...",
+          "Thank you for listening!"
+        ],
+        "parentCue": "Clap like an audience after Gabriel's 4-sentence English Show-and-Tell!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "fri-06",
+        "start": "12:15",
+        "end": "13:00",
+        "titleId": "MAKAN SIANG JUMAT",
+        "titleEn": "FRIDAY LUNCH TIME!",
+        "subtitleId": "Makan siang enak & ngobrol santai dalam Bahasa Inggris",
+        "subtitleEn": "Enjoy Friday lunch together in English!",
+        "category": "MEAL",
+        "illustration": "morning-breakfast.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Thank you for lunch!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "fri-07",
+        "start": "13:00",
+        "end": "13:55",
+        "titleId": "ISTIRAHAT SIANG & KAKI DI BANTAL",
+        "titleEn": "CLOUD PILLOW REST",
+        "subtitleId": "Rebahan santai & istirahatkan kaki di bantal empuk sebelum Homeroom sore",
+        "subtitleEn": "Rest your legs on the cloud pillow so you feel fresh for 3:00 PM Homeroom!",
+        "category": "REST",
+        "illustration": "rest-recharge.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Cozy pillow time!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "fri-08",
+        "start": "13:55",
+        "end": "14:50",
+        "titleId": "MENGGAMBAR & UDARA SEGAR TERAS",
+        "titleEn": "TERRACE DRAWING & FRESH AIR",
+        "subtitleId": "Gambar hal paling seru minggu ini untuk ditunjukkan ke Bu Nining nanti!",
+        "subtitleEn": "Draw your favorite moment of the week to show Bu Nining at Homeroom!",
+        "category": "MOVE",
+        "illustration": "gentle-stretch-art.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "I drew my family!",
+          "I will show this in Homeroom!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "fri-09",
+        "start": "14:50",
+        "end": "15:00",
+        "titleId": "SIAP HEADPHONE UNTUK HOMEROOM 1B!",
+        "titleEn": "READY FOR BU NINING'S HOMEROOM!",
+        "subtitleId": "Minum air, pasang headphone & sangga kaki di bantal untuk Zoom jam 15:00",
+        "subtitleEn": "Water sip, headphones on, feet on cushion - Homeroom starts at 3:00 PM!",
+        "category": "ZOOM",
+        "illustration": "zoom-class.jpg",
+        "englishMode": false,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Mama, tolong bukakan Zoom Homeroom Bu Nining!"
+        ],
+        "parentCue": "Open Homeroom 1B Zoom ID 934 2915 1232 (Passcode: SD1SMM) at 14:57.",
+        "zoomKey": "homeroom1B",
+        "customZoomUrl": ""
+      },
+      {
+        "id": "fri-10",
+        "start": "15:00",
+        "end": "16:00",
+        "titleId": "ZOOM LIVE: HOMEROOM 1B (BU NINING)",
+        "titleEn": "ZOOM LIVE: HOMEROOM 1B (BU NINING)",
+        "subtitleId": "Kumpul seru bareng Bu Nining & teman-teman Kelas 1 Bonsai!",
+        "subtitleEn": "Friday Homeroom Zoom with Bu Nining and Class 1B Bonsai friends!",
+        "category": "ZOOM",
+        "illustration": "zoom-class.jpg",
+        "englishMode": false,
+        "legNoteId": "Duduk nyaman dengan bantal kaki selama Homeroom",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Selamat sore Bu Nining!",
+          "Sampai jumpa minggu depan!"
+        ],
+        "parentCue": "Zoom ID: 934 2915 1232 | Passcode: SD1SMM.",
+        "zoomKey": "homeroom1B",
+        "customZoomUrl": ""
+      },
+      {
+        "id": "fri-11",
+        "start": "16:00",
+        "end": "17:30",
+        "titleId": "MANDI AIR HANGAT & WAKTU KELUARGA",
+        "titleEn": "WARM BATH & WEEKEND KICKOFF!",
+        "subtitleId": "Selesai sekolah minggu ini! Mandi air hangat & santai sore",
+        "subtitleEn": "School week complete! Enjoy a warm bath and cozy Friday family time!",
+        "category": "REST",
+        "illustration": "rest-recharge.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Yay, it's Friday afternoon!",
+          "What game can we play tonight?"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "fri-12",
+        "start": "17:30",
+        "end": "18:15",
+        "titleId": "MAKAN MALAM JUMAT",
+        "titleEn": "FRIDAY FAMILY DINNER!",
+        "subtitleId": "Makan malam bersama & rayakan pencapaian minggu ini",
+        "subtitleEn": "Friday family dinner - celebrate an awesome week in English!",
+        "category": "MEAL",
+        "illustration": "morning-breakfast.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "This week was awesome!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "fri-13",
+        "start": "18:15",
+        "end": "18:45",
+        "titleId": "MALAM BOARD GAME KELUARGA",
+        "titleEn": "FRIDAY BOARD GAME NIGHT!",
+        "subtitleId": "Main board game seru bareng Mama & Papa",
+        "subtitleEn": "Cozy Friday family board game on the sofa!",
+        "category": "TOY",
+        "illustration": "toy-play.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Let's play one more round!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "fri-14",
+        "start": "18:45",
+        "end": "19:15",
+        "titleId": "CERITA MALAM JUMAT",
+        "titleEn": "MOONLIGHT BEDTIME STORY",
+        "subtitleId": "Baca buku cerita favorit sebelum tidur",
+        "subtitleEn": "Pick a special Friday night storybook in bed!",
+        "category": "BOOK",
+        "illustration": "book-reading.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Goodnight story time!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "fri-15",
+        "start": "19:15",
+        "end": "20:00",
+        "titleId": "SIKAT GIGI & BOBO JAM 20:00",
+        "titleEn": "STARLIGHT SLEEP ROUTINE",
+        "subtitleId": "Sikat gigi, piyama nyaman & tidur pulas jam 20:00",
+        "subtitleEn": "Teeth, pajamas, big hugs, and asleep by 8:00 PM!",
+        "category": "SLEEP",
+        "illustration": "bedtime-sleep.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Goodnight, happy weekend!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "fri-16",
+        "start": "20:00",
+        "end": "23:59",
+        "titleId": "TIDUR NYENYAK AKHIR PEKAN",
+        "titleEn": "SWEET DREAMS, GABRIEL",
+        "subtitleId": "Selamat istirahat sampai Sabtu jam 08:00 pagi!",
+        "subtitleEn": "Sleeping peacefully until 8:00 AM Saturday!",
+        "category": "SLEEP",
+        "illustration": "bedtime-sleep.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "I am ready!",
+          "Look what I did, Mama!",
+          "Can you help me, please?"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      }
+    ],
+    "sat": [
+      {
+        "id": "sat-00",
+        "start": "00:00",
+        "end": "08:00",
+        "titleId": "TIDUR NYENYAK SAMPAI 08:00",
+        "titleEn": "SLEEPING PEACEFULLY",
+        "subtitleId": "Bobo santai akhir pekan sampai jam 08:00",
+        "subtitleEn": "Sleeping cozily until 8:00 AM!",
+        "category": "SLEEP",
+        "illustration": "bedtime-sleep.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "I am ready!",
+          "Look what I did, Mama!",
+          "Can you help me, please?"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "sat-01",
+        "start": "08:00",
+        "end": "09:00",
+        "titleId": "SARAPAN SANTAI SABTU PAGI",
+        "titleEn": "SLOW SATURDAY ENGLISH BREAKFAST!",
+        "subtitleId": "Bangun santai, sarapan keluarga & ngobrol Bahasa Inggris",
+        "subtitleEn": "Slow Saturday morning breakfast and cozy family English chat!",
+        "category": "MEAL",
+        "illustration": "morning-breakfast.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Good morning! Happy Saturday!",
+          "What are we doing today?"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "sat-02",
+        "start": "09:00",
+        "end": "10:15",
+        "titleId": "UDARA SEGAR TERAS & MAIN BEBAS",
+        "titleEn": "SUNNY TERRACE & TOY COVE",
+        "subtitleId": "Duduk santai di teras & main mainan favorit tanpa buru-buru",
+        "subtitleEn": "Enjoy morning sunshine in your terrace chair and build with toys!",
+        "category": "TOY",
+        "illustration": "toy-play.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Look at this sunny morning!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "sat-03",
+        "start": "10:15",
+        "end": "10:45",
+        "titleId": "LIVING ENGLISH RINGAN (25 MENIT)",
+        "titleEn": "LIVING ENGLISH FUN CHECK-IN",
+        "subtitleId": "Cek game/aktivitas singkat Living English minggu ini sambil duduk nyaman",
+        "subtitleEn": "25-minute fun Living English review on cushions with Mama!",
+        "category": "ENGLISH",
+        "illustration": "living-english-hub.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "I know all these words!",
+          "Listen to me read this sentence!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "sat-04",
+        "start": "10:45",
+        "end": "12:15",
+        "titleId": "PIKNIK BUKU CERITA DI RUMAH",
+        "titleEn": "SATURDAY ENGLISH BOOK PICNIC!",
+        "subtitleId": "Gelar bantal empuk & baca 3 buku cerita seru bareng Mama/Papa",
+        "subtitleEn": "Pile up big fluffy pillows and have an indoor English book & snack picnic!",
+        "category": "BOOK",
+        "illustration": "book-reading.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Welcome to our book picnic!",
+          "Which book should we read first?"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "sat-05",
+        "start": "12:15",
+        "end": "13:15",
+        "titleId": "MAKAN SIANG KELUARGA",
+        "titleEn": "SATURDAY FAMILY LUNCH",
+        "subtitleId": "Makan siang santai akhir pekan",
+        "subtitleEn": "Relaxed Saturday lunch together in English!",
+        "category": "MEAL",
+        "illustration": "morning-breakfast.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Saturday lunch is the best!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "sat-06",
+        "start": "13:15",
+        "end": "14:30",
+        "titleId": "ISTIRAHAT SIANG & KAKI RILEKS",
+        "titleEn": "CLOUD PILLOW AFTERNOON REST",
+        "subtitleId": "Istirahat siang nyaman sambil menyangga kaki di bantal",
+        "subtitleEn": "Quiet Saturday rest with legs elevated on a soft pillow!",
+        "category": "REST",
+        "illustration": "rest-recharge.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Resting my legs nicely!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "sat-07",
+        "start": "14:30",
+        "end": "16:30",
+        "titleId": "JALAN SORE SANTAI MOBIL / MAIN DI RUMAH",
+        "titleEn": "GENTLE FAMILY OUTING / CREATIVE PLAY",
+        "subtitleId": "Jalan santai naik mobil (minim jalan kaki jauh) atau kreasi seru di rumah",
+        "subtitleEn": "Gentle car ride / seated cafe treat or big creative Lego session at home!",
+        "category": "MOVE",
+        "illustration": "gentle-stretch-art.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Keep walking short & easy while your leg finishes healing!",
+        "kidPhrases": [
+          "Can I order my drink in English?",
+          "Thank you very much!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "sat-08",
+        "start": "16:30",
+        "end": "18:15",
+        "titleId": "MANDI AIR HANGAT & MAKAN MALAM",
+        "titleEn": "WARM BATH & SATURDAY DINNER",
+        "subtitleId": "Mandi air hangat & makan malam akhir pekan bersama keluarga",
+        "subtitleEn": "Warm relaxing bath and cozy Saturday family dinner!",
+        "category": "MEAL",
+        "illustration": "morning-breakfast.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Today was such a happy Saturday!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "sat-09",
+        "start": "18:15",
+        "end": "19:15",
+        "titleId": "GAME KELUARGA & CERITA TIDUR",
+        "titleEn": "BOARD GAME & BEDTIME STORY",
+        "subtitleId": "Main kartu/board game lalu baca buku cerita malam",
+        "subtitleEn": "Family game time followed by a calm moonlight story!",
+        "category": "BOOK",
+        "illustration": "book-reading.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Let's read under the warm lamp!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "sat-10",
+        "start": "19:15",
+        "end": "20:00",
+        "titleId": "SIKAT GIGI & BOBO JAM 20:00",
+        "titleEn": "STARLIGHT SLEEP ROUTINE",
+        "subtitleId": "Tetap jaga jam tidur 20:00 supaya kaki cepat pulih total!",
+        "subtitleEn": "Consistent 8:00 PM sleep keeps your body and legs super strong!",
+        "category": "SLEEP",
+        "illustration": "bedtime-sleep.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Goodnight Mama & Papa!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "sat-11",
+        "start": "20:00",
+        "end": "23:59",
+        "titleId": "TIDUR NYENYAK",
+        "titleEn": "SWEET DREAMS",
+        "subtitleId": "Selamat tidur sampai Minggu pagi jam 08:00!",
+        "subtitleEn": "Sleeping peacefully!",
+        "category": "SLEEP",
+        "illustration": "bedtime-sleep.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "I am ready!",
+          "Look what I did, Mama!",
+          "Can you help me, please?"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      }
+    ],
+    "sun": [
+      {
+        "id": "sun-00",
+        "start": "00:00",
+        "end": "08:00",
+        "titleId": "TIDUR NYENYAK SAMPAI 08:00",
+        "titleEn": "SLEEPING PEACEFULLY",
+        "subtitleId": "Bobo santai Minggu pagi sampai jam 08:00",
+        "subtitleEn": "Sleeping cozily until 8:00 AM!",
+        "category": "SLEEP",
+        "illustration": "bedtime-sleep.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "I am ready!",
+          "Look what I did, Mama!",
+          "Can you help me, please?"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "sun-01",
+        "start": "08:00",
+        "end": "09:15",
+        "titleId": "MINGGU PAGI CERIA & SARAPAN",
+        "titleEn": "SUNNY SUNDAY BREAKFAST!",
+        "subtitleId": "Sarapan hangat keluarga tanpa jadwal kelas hari ini!",
+        "subtitleEn": "100% class-free Sunday! Enjoy warm breakfast and English morning chat!",
+        "category": "MEAL",
+        "illustration": "morning-breakfast.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Happy Sunday, everyone!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "sun-02",
+        "start": "09:15",
+        "end": "11:15",
+        "titleId": "MAIN BEBAS & KREASI SENI DUDUK",
+        "titleEn": "SUNDAY FREE PLAY & ART STUDIO",
+        "subtitleId": "Bebas bermain mainan kesukaan, melukis, atau merakit Lego seharian",
+        "subtitleEn": "Unrushed Sunday play, painting, clay, and Lego storytelling!",
+        "category": "TOY",
+        "illustration": "toy-play.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Let's build something huge together!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "sun-03",
+        "start": "11:15",
+        "end": "12:15",
+        "titleId": "CERITA & LAGU BAHASA INGGRIS",
+        "titleEn": "SUNDAY STORY & SONG HARBOR",
+        "subtitleId": "Baca buku cerita & nyanyi lagu Bahasa Inggris ceria di sofa",
+        "subtitleEn": "Read favorite storybooks and sing fun English songs on the sofa!",
+        "category": "BOOK",
+        "illustration": "book-reading.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Sing this song with me!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "sun-04",
+        "start": "12:15",
+        "end": "13:15",
+        "titleId": "MAKAN SIANG MINGGU",
+        "titleEn": "SUNDAY FAMILY LUNCH",
+        "subtitleId": "Makan siang santai bersama keluarga",
+        "subtitleEn": "Cozy Sunday lunch together!",
+        "category": "MEAL",
+        "illustration": "morning-breakfast.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Thank you for cooking!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "sun-05",
+        "start": "13:15",
+        "end": "14:30",
+        "titleId": "ISTIRAHAT SIANG & PEMULIHAN KAKI",
+        "titleEn": "SUNDAY CLOUD PILLOW REST",
+        "subtitleId": "Istirahat penuh supaya siap dan segar untuk hari Senin besok",
+        "subtitleEn": "Full Sunday leg rest on your cloud pillow!",
+        "category": "REST",
+        "illustration": "rest-recharge.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "My legs feel rested and cozy!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "sun-06",
+        "start": "14:30",
+        "end": "16:30",
+        "titleId": "WAKTU SANTAI KELUARGA",
+        "titleEn": "COZY FAMILY AFTERNOON",
+        "subtitleId": "Main santai bersama Mama & Papa di rumah",
+        "subtitleEn": "Relaxed Sunday afternoon together with zero rush!",
+        "category": "TOY",
+        "illustration": "toy-play.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "I love spending time together!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "sun-07",
+        "start": "16:30",
+        "end": "18:15",
+        "titleId": "MANDI AIR HANGAT & MAKAN MALAM",
+        "titleEn": "WARM BATH & SUNDAY DINNER",
+        "subtitleId": "Mandi air hangat & makan malam keluarga",
+        "subtitleEn": "Warm soothing bath and Sunday dinner highlight!",
+        "category": "MEAL",
+        "illustration": "morning-breakfast.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "I'm ready for a great new week!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "sun-08",
+        "start": "18:15",
+        "end": "19:15",
+        "titleId": "PUZZLE SANTAI & CERITA TIDUR",
+        "titleEn": "CALM PUZZLE & BEDTIME STORY",
+        "subtitleId": "Main puzzle tenang lalu baca cerita pengantar tidur",
+        "subtitleEn": "Quiet puzzle and moonlight bedtime story!",
+        "category": "BOOK",
+        "illustration": "book-reading.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Read softly, please!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "sun-09",
+        "start": "19:15",
+        "end": "20:00",
+        "titleId": "SIKAT GIGI & BOBO JAM 20:00",
+        "titleEn": "STARLIGHT SLEEP ROUTINE",
+        "subtitleId": "Sikat gigi, piyama nyaman & tidur jam 20:00 untuk hari Senin!",
+        "subtitleEn": "Teeth, pajamas, hugs, and asleep at 8:00 PM ready for Monday!",
+        "category": "SLEEP",
+        "illustration": "bedtime-sleep.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "Goodnight, sweet dreams!"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      },
+      {
+        "id": "sun-10",
+        "start": "20:00",
+        "end": "23:59",
+        "titleId": "TIDUR NYENYAK",
+        "titleEn": "SWEET DREAMS",
+        "subtitleId": "Selamat tidur sampai Senin jam 08:00 pagi!",
+        "subtitleEn": "Sleeping peacefully!",
+        "category": "SLEEP",
+        "illustration": "bedtime-sleep.jpg",
+        "englishMode": true,
+        "legNoteId": "Duduk nyaman & jaga kaki tetap rileks ya",
+        "legNoteEn": "Sit nice and cozy and rest your legs!",
+        "kidPhrases": [
+          "I am ready!",
+          "Look what I did, Mama!",
+          "Can you help me, please?"
+        ],
+        "parentCue": "Speak warm, simple English sentences and praise effort!",
+        "zoomKey": null,
+        "customZoomUrl": ""
+      }
+    ]
+  },
+  "zoomDirectory": {
+    "daringRutin1B": {
+      "id": "daringRutin1B",
+      "name": "SMM Daring Rutin - Kelas 1B Bonsai (Bu Nining)",
+      "teacher": "Bu Nining (@listianingning)",
+      "meetingId": "934 2915 1232",
+      "passcode": "SD1SMM",
+      "url": "https://sekolahmuridmerdeka.zoom.us/j/93429151232?pwd=hOe46adY9NaxbTfFhUHif2HVJzbVSi.1",
+      "telegram": "https://t.me/+DZjAlgsJvIkyNzI1",
+      "scheduleNote": "Selasa & Kamis | Pagi 08:00-09:10 WIB (atau Sore 16:00-17:10 WIB)"
+    },
+    "english1B": {
+      "id": "english1B",
+      "name": "SMM English - Kelas 1B (Ms. Aan)",
+      "teacher": "Ms. Aan (@jannahrhtl)",
+      "meetingId": "941 2939 3790",
+      "passcode": "year1",
+      "url": "https://sekolahmuridmerdeka.zoom.us/j/94129393790?pwd=k2NXi9XIZacZdauQ5rS2k0bouZ7DA7.1",
+      "telegram": "https://t.me/+zSjj5uw0BjgyMGE1",
+      "scheduleNote": "Rabu | 07:00-08:00 WIB"
+    },
+    "pjok1B": {
+      "id": "pjok1B",
+      "name": "SMM PJOK Kelas 1 (Bu Eva) - Adaptasi Duduk / Leg-Safe",
+      "teacher": "Bu Eva (@Evayuaditia)",
+      "meetingId": "919 3577 1786",
+      "passcode": "-",
+      "url": "https://sekolahmuridmerdeka.zoom.us/j/91935771786",
+      "telegram": "https://t.me/+s8Z9ax_9l304ZmNl",
+      "scheduleNote": "Rabu | 09:30-10:30 WIB (Gerak duduk ringan, kaki masih pemulihan)"
+    },
+    "homeroom1B": {
+      "id": "homeroom1B",
+      "name": "SMM Homeroom - Kelas 1B Bonsai (Bu Nining)",
+      "teacher": "Bu Nining (@listianingning)",
+      "meetingId": "934 2915 1232",
+      "passcode": "SD1SMM",
+      "url": "https://sekolahmuridmerdeka.zoom.us/j/93429151232?pwd=hOe46adY9NaxbTfFhUHif2HVJzbVSi.1",
+      "telegram": "https://t.me/+DZjAlgsJvIkyNzI1",
+      "scheduleNote": "Jumat | 15:00-16:00 WIB"
+    },
+    "livingEnglishOffline": {
+      "id": "livingEnglishOffline",
+      "name": "Living English Offline - Kids Hub Tebet (POSTPONED -> DEC 2026)",
+      "teacher": "Kak Ridha / Ms. Tantry (Kids Hub Tebet)",
+      "meetingId": "POSTPONED UNTIL DEC 2026",
+      "passcode": "-",
+      "url": "https://livingenglish.sekolah.mu",
+      "telegram": "https://chat.whatsapp.com/CsIosEn63E4KVr2koVo7pw",
+      "scheduleNote": "POSTPONED untuk November 2026 (rencana mulai Desember 2026: Senin & Rabu 14:30-16:00 WIB). Selama Nov: diganti sesi mandiri LMS di rumah."
+    },
+    "amber4Online": {
+      "id": "amber4Online",
+      "name": "Amber 4 Online Class (Zoom Live)",
+      "teacher": "Amber 4 Teacher",
+      "meetingId": "943 3313 7819",
+      "passcode": "Embedded in Link",
+      "url": "https://sekolahmuridmerdeka.zoom.us/j/94333137819?pwd=eRKo4xERfY2IIbIa6b5d0LDb5IkNS4.1",
+      "telegram": "",
+      "scheduleNote": "16:00-17:15 WIB"
+    },
+    "waydivers5Backup": {
+      "id": "waydivers5Backup",
+      "name": "Living English Online Sinkronus (Waydivers 5 - Ms. Sarah)",
+      "teacher": "Ms. Sarah (Jadwal sementara pra-observasi)",
+      "meetingId": "939 3225 0068",
+      "passcode": "LEOnline",
+      "url": "https://sekolahmuridmerdeka.zoom.us/j/93932250068?pwd=9Vr4yPS1jQfuRnJEvOFb0jB20NxLbw.1",
+      "telegram": "https://livingenglish.sekolah.mu",
+      "scheduleNote": "Pilihan Rabu atau Kamis | 18:15-19:00 WIB (Rekaman di Group Session 1 LMS)"
+    }
+  },
+  "agamaOptions": {
+    "none": {
+      "label": "Belum Dipilih / Mandiri",
+      "day": null
+    },
+    "kristen": {
+      "label": "Agama Kristen 1B (Bu Bonita/Roma - Senin 15:00-16:00)",
+      "day": "mon",
+      "start": "15:00",
+      "end": "16:00",
+      "meetingId": "932 7913 0458",
+      "passcode": "KristenSD",
+      "url": "https://sekolahmuridmerdeka.zoom.us/j/93279130458?pwd=gnDxN5o2tBuOiZywiWu5ZbEYQvz3mO.1",
+      "note": "Catatan: Selama November 2026 aman tanpa bentrok karena kelas offline Living English Tebet ditunda ke Desember 2026."
+    },
+    "katolik": {
+      "label": "Agama Katolik 1B (Bu Sandio - Jumat 16:00-17:00)",
+      "day": "fri",
+      "start": "16:00",
+      "end": "17:00",
+      "meetingId": "987 2650 1209",
+      "passcode": "SMMPAKat1",
+      "url": "https://sekolahmuridmerdeka.zoom.us/j/98726501209?pwd=AHbfOf2dcG9ttGbdRhmtpQi09A38LD.1",
+      "note": "Jumat 16:00-17:00 WIB langsung setelah Homeroom Bu Nining"
+    },
+    "islam": {
+      "label": "Agama Islam 1B (Bu Riha - Senin 09:00-10:00)",
+      "day": "mon",
+      "start": "09:00",
+      "end": "10:00",
+      "meetingId": "993 7353 8878",
+      "passcode": "AIslam1B",
+      "url": "https://sekolahmuridmerdeka.zoom.us/j/99373538878?pwd=gLZ5r3Fn1IWj0qfAoK9b28GrrClbub.1",
+      "note": "Senin 09:00-10:00 WIB (+ Kelas Mengaji pilih 1 sesi)"
+    },
+    "buddha": {
+      "label": "Agama Buddha 1B (Bu Christine - Jumat 17:00-18:00, 2 minggu sekali)",
+      "day": "fri",
+      "start": "17:00",
+      "end": "18:00",
+      "meetingId": "938 5145 8345",
+      "passcode": "-",
+      "url": "https://sekolahmuridmerdeka.zoom.us/j/93851458345",
+      "note": "Setiap 2 minggu sekali di hari Jumat pukul 17:00-18:00 WIB"
+    },
+    "hindu": {
+      "label": "Agama Hindu 1B (Pak Eri - Jumat 17:00-18:00, 2 minggu sekali)",
+      "day": "fri",
+      "start": "17:00",
+      "end": "18:00",
+      "meetingId": "932 0997 5885",
+      "passcode": "Embedded",
+      "url": "https://sekolahmuridmerdeka.zoom.us/j/93209975885?pwd=CU9mFFZkCasixpbsMP6XaSzana5JEs.1",
+      "note": "Setiap 2 minggu sekali di hari Jumat pukul 17:00-18:00 WIB"
+    }
+  },
+  "englishPlan": {
+    "activePhase": 3,
+    "phases": [
+      {
+        "id": 1,
+        "name": "Phase 1: Warm-Up Anchors (Week 1-2)",
+        "hoursPerDay": "~2.5 hrs / day",
+        "summary": "Start gentle so Gabriel feels zero frustration: Breakfast + Morning Toy/Book + Home Living English LMS / Pre-Amber 4 are 100% English (Offline Tebet postponed until Dec).",
+        "rule": "Use the RECAST RULE: if Gabriel replies in Indonesian ('Mama ambilkan minum'), smile warmly and say 'Can you get me water, please? Sure, here is your water!' Never scold or force repetition.",
+        "categoriesEnabled": [
+          "ENGLISH",
+          "OFFLINE",
+          "BOOK"
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Phase 2: Half-Day English Mode (Week 3-4)",
+        "hoursPerDay": "~5.0 hrs / day",
+        "summary": "Add all Toy Play, Lunch, Terrace Art, and Family Dinner Highlight in Full English.",
+        "rule": "Use 2-Choice Scaffolding whenever he hesitates: 'Do you want the big red block or the long blue block?' so he has the exact English words ready to pick.",
+        "categoriesEnabled": [
+          "ENGLISH",
+          "OFFLINE",
+          "BOOK",
+          "TOY",
+          "MEAL"
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Phase 3: Full Daytime English Default (Week 5-6)",
+        "hoursPerDay": "~8.5 hrs / day",
+        "summary": "Every home alarm block shows English headlines & voice prompts EXCEPT Indonesian SMM school classes (Daring Rutin, PJOK, Homeroom, Agama).",
+        "rule": "Let the Tablet Alarm be the playful cue: 'Ooh look, Gabriel's Alarm says ENGLISH SPEAKING TIME! Let's switch our English brains ON!'",
+        "categoriesEnabled": [
+          "ENGLISH",
+          "OFFLINE",
+          "BOOK",
+          "TOY",
+          "MEAL",
+          "MOVE",
+          "REST",
+          "SLEEP"
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Phase 4: 100% Full-Day Natural Habit (Week 7+)",
+        "hoursPerDay": "10+ hrs / day",
+        "summary": "Full daily English habit from Morning Wake-Up to 19:35 Goodnight Hugs, switching to Indonesian only when speaking directly to Indonesian SMM teachers.",
+        "rule": "Comfort-First Exception: if his sore leg hurts or he feels sad/scared, comfort him immediately in whichever language comes out first, then softly model the feeling in English.",
+        "categoriesEnabled": [
+          "ENGLISH",
+          "OFFLINE",
+          "BOOK",
+          "TOY",
+          "MEAL",
+          "MOVE",
+          "REST",
+          "SLEEP",
+          "SMM"
+        ]
+      }
+    ],
+    "situationScripts": [
+      {
+        "id": "wake-meal",
+        "title": "1. Morning Wake & Breakfast Cafe",
+        "time": "07:30 / 08:00 & Meals",
+        "parentSays": "Good morning, Gabriel! Did you sleep well? Welcome to Mama's Cafe - what would you like to order today?",
+        "gabrielSays": "Good morning, Mama! I slept great! Can I have warm milk and toast with egg, please?",
+        "microGame": "Waiter Roleplay: Pretend to write his order on an invisible notepad - only English orders unlock the kitchen bell!"
+      },
+      {
+        "id": "lego-play",
+        "title": "2. Lego, Blocks & Pretend Market",
+        "time": "10:30 - 11:30 Daily",
+        "parentSays": "Whoa, that looks awesome! Tell me three things about what you're building right now.",
+        "gabrielSays": "This is a big garage! The blue car goes super fast, and the little driver sleeps upstairs.",
+        "microGame": "Waydivers Market Shop: Give 5 toy coins - 'How much is this apple?' 'Two coins, please! Thank you!'"
+      },
+      {
+        "id": "story-read",
+        "title": "3. Sofa Storybook Detective",
+        "time": "11:30 & 18:45",
+        "parentSays": "Before I read the words, look at the picture - what do you think is happening? Why is he surprised?",
+        "gabrielSays": "I think he found a secret door! My favorite character is the brave puppy.",
+        "microGame": "Magic Word of the Day: Pick 1 cool English word from the book and try using it once at dinner!"
+      },
+      {
+        "id": "tebet-car",
+        "title": "4. Afternoon Home LMS & Pre-Zoom Warmup",
+        "time": "Mon/Wed 14:35 & Tue 15:50",
+        "parentSays": "Time for our cozy home English game! I spy with my little eye right here in the living room... something yellow!",
+        "gabrielSays": "Is it my Lego box? Now my turn! I spy something soft and blue!",
+        "microGame": "Home 'I Spy' + 20-min Living English LMS replaces the Tebet car ride while offline events are postponed until December 2026!"
+      },
+      {
+        "id": "leg-comfort",
+        "title": "5. Leg Comfort & Body Check-In",
+        "time": "Anytime (Seated / Pillow)",
+        "parentSays": "Let's do a cozy body check - how does your leg feel on the cushion right now, scale of cozy cloud to tired?",
+        "gabrielSays": "My leg feels comfy on the soft pillow! / My leg feels a little tired, let's rest.",
+        "microGame": "Gives Gabriel gentle English words for physical sensations so he never feels stuck expressing comfort."
+      },
+      {
+        "id": "dinner-bed",
+        "title": "6. Dinner Highlight & Starlight Goodnight",
+        "time": "17:30 - 19:35",
+        "parentSays": "Let's share our Rose & Bud: what was your #1 happiest moment today, and 1 thing you're excited for tomorrow?",
+        "gabrielSays": "My rose today was building my train track! Tomorrow I'm excited for Living English!",
+        "microGame": "3 Grateful Whispers at 19:35 right before lights out -> calm, happy English end to every day."
+      }
+    ],
+    "dailyHabits": [
+      {
+        "id": "h1",
+        "label": "Ordered breakfast in full English ('Can I have... please?')",
+        "doneDates": []
+      },
+      {
+        "id": "h2",
+        "label": "Spoke 3+ English sentences during Lego / Toy Play",
+        "doneDates": []
+      },
+      {
+        "id": "h3",
+        "label": "Read 1 English picture book & answered 'What happens next?'",
+        "doneDates": []
+      },
+      {
+        "id": "h4",
+        "label": "Played English 'I Spy' at home or spoke full English in Zoom / LMS (Offline postponed -> Dec)",
+        "doneDates": []
+      },
+      {
+        "id": "h5",
+        "label": "Shared 1 Dinner Highlight sentence in English",
+        "doneDates": []
+      },
+      {
+        "id": "h6",
+        "label": "Said English bedtime routine & goodnight wishes before 20:00",
+        "doneDates": []
+      }
+    ],
+    "customPhrases": [
+      {
+        "phrase": "Wait a second, let me think!",
+        "note": "Great natural filler instead of switching to Indonesian"
+      },
+      {
+        "phrase": "How do you say ___ in English, Mama?",
+        "note": "Keeps him inside English mode even when missing a word!"
+      },
+      {
+        "phrase": "Let me prop my feet on my soft pillow.",
+        "note": "Daily leg-recovery self-advocacy phrase"
+      }
+    ],
+    "parentNotes": "Target: Keep English warm, playful, and connected to Gabriel's real daily alarm transitions. Zero scolding - celebrate every attempt!"
+  }
+}
